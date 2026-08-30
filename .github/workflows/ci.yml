@@ -37,3 +37,6 @@ jobs:
       - run: uv run --locked gbflex validate --suite smoke
       - run: uv run --locked gbflex demo run --hours 24 --seeds 11,22 --output runs/ci-demo
       - run: uv run --locked gbflex verify --run runs/ci-demo
+      - run: uv run --locked gbflex verify --run docs/reference/experiment
+      - run: uv run --locked gbflex verify --run docs/reference/benchmark-168
+      - run: uv run --locked gbflex verify --run docs/reference/benchmark-8760
