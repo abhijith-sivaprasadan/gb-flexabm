@@ -74,6 +74,7 @@ Use the exact manifest path printed by `fetch`. Raw files stay ignored locally, 
 - [Specification and acceptance map](docs/SPEC.md): implemented scope and test evidence.
 - [Data contracts and sources](docs/DATA.md): demand boundary, units and provenance.
 - [Roadmap](docs/ROADMAP.md): empirical calibration, adequacy, institutional mechanisms and multi-energy research gates.
+- [Verification and reference results](docs/VERIFICATION.md): measured benchmarks, replay and the zero-effect stress-fixture finding.
 - [Contributing](CONTRIBUTING.md), [security](SECURITY.md), [code of conduct](CODE_OF_CONDUCT.md), [citation](CITATION.cff).
 
 Code, original documentation and synthetic fixtures are MIT-licensed. External datasets retain their publisher's terms. Please cite the exact commit and run manifest; there is no peer-reviewed validation, DOI or publication claim.

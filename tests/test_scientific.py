@@ -201,6 +201,16 @@ def test_requests_respect_budget_and_simultaneous_build_cap():
     assert first.accepted_mw.tolist() == [50, 50]
 
 
+def test_capacity_payment_can_cross_an_investment_threshold():
+    tech = simple_system().technologies[0]
+    investor = Investor("threshold", "gas", 0.05, 1, 0, 0, 10000, 10)
+    no_payment, negative_score = investor.request(tech, 0, 0)
+    payment, positive_score = investor.request(tech, 0, 1)
+    assert negative_score == -tech.capex_gbp_per_mw
+    assert no_payment == 0
+    assert positive_score > 0 and payment == 10
+
+
 @pytest.mark.parametrize("year", [2026.5, True, float("nan")])
 def test_asset_year_must_be_integer(year):
     with pytest.raises(ValueError, match="integer year"):

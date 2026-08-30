@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "publisher": "NESO",
+  "dataset": "historic-demand-data",
+  "resource_id": "f6d02c0f-957b-48cb-82ee-09003f2ba759",
+  "source_url": "https://api.neso.energy/dataset/8f2fe0af-871c-488d-8bad-960426f24601/resource/f6d02c0f-957b-48cb-82ee-09003f2ba759/download/demanddata_2024.csv",
+  "source_modified": "2025-04-08T19:55:41.954513",
+  "licences": [
+    {
+      "path": "https://www.neso.energy/data-portal/ngeso-open-licence",
+      "name": "ESO",
+      "title": "NESO Open Data Licence"
+    }
+  ],
+  "retrieved_at_utc": "2026-08-30T19:29:05.985634+00:00",
+  "sha256": "fa7895b6e9ab5eb1b450949d969cb18ffeb6005359fc71c79c87e1c47e59cac6",
+  "metadata_sha256": "4e1077e28c7ac5ae310ea25df38e26be3ffdd7bb9d27698115c1a7ea0ad04973",
+  "file": "source.csv",
+  "rows": 17568,
+  "duration_hours": 8784.0,
+  "demand_definition": "National Demand (ND), not total end-use demand; excludes specified station load, pumping and exports.",
+  "power_unit": "MW",
+  "timezone": "UTC",
+  "processing_function": "gb_flexabm.data.parse_neso_demand"
+}

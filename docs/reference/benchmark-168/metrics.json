@@ -1,0 +1,18 @@
+{
+  "variable_resource_cost_gbp": 38359286007.12114,
+  "demand_mwh": 219000000.00000003,
+  "unserved_mwh": 4307382.136466298,
+  "scarcity_hours": 2294.285714285715,
+  "emissions_t": 54489275.12116338,
+  "renewable_curtailment_mwh": 0.0,
+  "balance_max_mw": 3.637978807091713e-12,
+  "storage_residual_max_mwh": 2.2737367544323206e-13,
+  "mean_price_gbp_per_mwh": 1788.0952380952378,
+  "consumer_energy_payment_gbp": 404198493793.14526,
+  "hours": 168,
+  "weighted_hours": 8760.000000000002,
+  "solve_seconds": 0.3789193000411615,
+  "total_seconds": 0.47553990001324564,
+  "peak_python_allocation_bytes": 4201983,
+  "memory_measurement": "tracemalloc Python allocations; excludes native solver memory, not peak RSS"
+}

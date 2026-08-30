@@ -1,0 +1,49 @@
+{
+  "config_sha256": "d911c116aba739ba9b6c6b0404854080b5308555f710c5ea8799b17947548ee6",
+  "random_seeds": [],
+  "kind": "synthetic_dispatch_benchmark",
+  "code": {
+    "git_sha": "014125940547c2e2e497e95fd862d07964f3c44a",
+    "working_tree_dirty": false,
+    "source_sha256": "cba9df4a812eff1dc05ea68aac5e64bcda6d6759e0d92b3685ede1786cd071a4",
+    "version": "0.1.0"
+  },
+  "dependencies": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pyomo": "6.10.0",
+    "highspy": "1.13.1"
+  },
+  "solver_options": {
+    "threads": 1,
+    "parallel": "off",
+    "random_seed": 0,
+    "primal_feasibility_tolerance": 1e-07,
+    "dual_feasibility_tolerance": 1e-07
+  },
+  "data_kind": "exploratory_synthetic",
+  "schema_version": 1,
+  "run_id": "4ed9de33a731642779906564a6e8d0a1852f2fa63acd255c36a550a4c922802d",
+  "created_at_utc": "2026-08-30T19:33:47.712947+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "wall_seconds": 25.112124599982053,
+  "solver_status": "optimal",
+  "checks": {
+    "energy_balance": true,
+    "storage_balance": true,
+    "cyclic_storage": true,
+    "capacity_bounds": true,
+    "shed_bounds": true,
+    "storage_bounds": true,
+    "storage_power_bounds": true,
+    "finite_dual_prices": true,
+    "objective_recomputed": true
+  },
+  "outputs": {
+    "config.json": "b6a2e4b14d3e3cad267089b7455b2f50a9eac4f54ba068a5e08c7d16c47a81ac",
+    "dispatch.csv": "a4ab142beb2c228246976f8bd98e83acb67f981da8f821da2e49f0f8af913289",
+    "metrics.json": "40c81ace13a789ec2c4e56a12042227a5f6457b038d6ec0deb2b1539e788185d"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "scientific_status": "exploratory_synthetic",
+  "assumption_source": "Author-designed teaching fixture; no parameters are fitted or asserted to be observed GB values. Currency is a scenario GBP basis, not inflation-adjusted empirical data.",
+  "years": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "hours": 8760,
+  "annual_hours": 8760,
+  "base_demand_mw": 25000,
+  "demand_growth_fraction": 0.025,
+  "discount_rate": 0.05,
+  "voll_gbp_per_mwh": 6000,
+  "initial_expected_price_gbp_per_mwh": 80,
+  "capacity_price_gbp_per_kw_year": 75,
+  "storage": {
+    "power_mw": 1000,
+    "energy_mwh": 4000,
+    "charge_efficiency": 0.95,
+    "discharge_efficiency": 0.95,
+    "throughput_cost_gbp_per_mwh": 1
+  },
+  "technologies": [
+    {
+      "name": "gas",
+      "profile": "firm",
+      "capex_gbp_per_mw": 850000,
+      "fixed_cost_gbp_per_mw_year": 25000,
+      "variable_cost_gbp_per_mwh": 80,
+      "emissions_t_per_mwh": 0.36,
+      "lifetime_years": 25,
+      "construction_years": 2,
+      "max_build_mw_per_year": 2500,
+      "derating": 0.9
+    },
+    {
+      "name": "peaker",
+      "profile": "firm",
+      "capex_gbp_per_mw": 450000,
+      "fixed_cost_gbp_per_mw_year": 15000,
+      "variable_cost_gbp_per_mwh": 150,
+      "emissions_t_per_mwh": 0.55,
+      "lifetime_years": 20,
+      "construction_years": 1,
+      "max_build_mw_per_year": 2000,
+      "derating": 0.9
+    },
+    {
+      "name": "wind",
+      "profile": "wind",
+      "capex_gbp_per_mw": 1400000,
+      "fixed_cost_gbp_per_mw_year": 40000,
+      "variable_cost_gbp_per_mwh": 2,
+      "emissions_t_per_mwh": 0,
+      "lifetime_years": 25,
+      "construction_years": 2,
+      "max_build_mw_per_year": 4000,
+      "derating": 0.15
+    },
+    {
+      "name": "solar",
+      "profile": "solar",
+      "capex_gbp_per_mw": 600000,
+      "fixed_cost_gbp_per_mw_year": 10000,
+      "variable_cost_gbp_per_mwh": 1,
+      "emissions_t_per_mwh": 0,
+      "lifetime_years": 25,
+      "construction_years": 1,
+      "max_build_mw_per_year": 3500,
+      "derating": 0.08
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "legacy-gas",
+      "owner": "legacy",
+      "technology": "gas",
+      "capacity_mw": 14000,
+      "commission_year": 2008,
+      "retirement_year": 2035
+    },
+    {
+      "asset_id": "retiring-gas",
+      "owner": "legacy",
+      "technology": "gas",
+      "capacity_mw": 3000,
+      "commission_year": 2001,
+      "retirement_year": 2029
+    },
+    {
+      "asset_id": "legacy-peaker",
+      "owner": "legacy",
+      "technology": "peaker",
+      "capacity_mw": 3000,
+      "commission_year": 2018,
+      "retirement_year": 2038
+    },
+    {
+      "asset_id": "legacy-wind",
+      "owner": "legacy",
+      "technology": "wind",
+      "capacity_mw": 12000,
+      "commission_year": 2020,
+      "retirement_year": 2045
+    },
+    {
+      "asset_id": "legacy-solar",
+      "owner": "legacy",
+      "technology": "solar",
+      "capacity_mw": 9000,
+      "commission_year": 2020,
+      "retirement_year": 2045
+    }
+  ],
+  "investors": [
+    {
+      "investor_id": "gas-a",
+      "technology": "gas",
+      "hurdle_rate": 0.08,
+      "expectation_weight": 0.4,
+      "risk_aversion": 0.5,
+      "forecast_noise_fraction": 0.1,
+      "annual_budget_gbp": 1200000000,
+      "project_size_mw": 250
+    },
+    {
+      "investor_id": "peaker-a",
+      "technology": "peaker",
+      "hurdle_rate": 0.1,
+      "expectation_weight": 0.6,
+      "risk_aversion": 0.8,
+      "forecast_noise_fraction": 0.15,
+      "annual_budget_gbp": 750000000,
+      "project_size_mw": 200
+    },
+    {
+      "investor_id": "wind-a",
+      "technology": "wind",
+      "hurdle_rate": 0.06,
+      "expectation_weight": 0.3,
+      "risk_aversion": 0.4,
+      "forecast_noise_fraction": 0.1,
+      "annual_budget_gbp": 1800000000,
+      "project_size_mw": 250
+    },
+    {
+      "investor_id": "wind-b",
+      "technology": "wind",
+      "hurdle_rate": 0.1,
+      "expectation_weight": 0.7,
+      "risk_aversion": 1.0,
+      "forecast_noise_fraction": 0.2,
+      "annual_budget_gbp": 1000000000,
+      "project_size_mw": 250
+    },
+    {
+      "investor_id": "solar-a",
+      "technology": "solar",
+      "hurdle_rate": 0.07,
+      "expectation_weight": 0.5,
+      "risk_aversion": 0.6,
+      "forecast_noise_fraction": 0.12,
+      "annual_budget_gbp": 1200000000,
+      "project_size_mw": 100
+    }
+  ]
+}
