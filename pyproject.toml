@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gb-flexabm"
+version = "0.1.0"
+description = "Exploratory electricity investment ABM and shared central-planner benchmark"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = "MIT"
+authors = [{name = "Abhijith Sivaprasadan"}]
+dependencies = [
+  "numpy==2.2.6", "pandas==2.3.3", "pyomo==6.10.0", "highspy==1.13.1",
+  "matplotlib==3.10.0", "pyyaml==6.0.2", "tzdata>=2025.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "hypothesis>=6,<7", "ruff>=0.9,<1", "mypy>=1.15,<2", "types-PyYAML", "pandas-stubs"]
+
+[project.scripts]
+gbflex = "gb_flexabm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gb_flexabm = ["fixtures/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".tools", ".venv", "runs", "data", ".firecrawl"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src/gb_flexabm"]
+ignore_missing_imports = true
+check_untyped_defs = true

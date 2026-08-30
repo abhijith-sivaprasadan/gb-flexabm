@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Cite this software with the exact Git commit and experiment manifest. This is an exploratory model, not a validated GB forecast."
+title: "GB-FLEXABM: electricity investment agents and a shared planning benchmark"
+type: software
+authors:
+  - family-names: Sivaprasadan
+    given-names: Abhijith
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/abhijith-sivaprasadan/gb-flexabm"
+keywords:
+  - energy-system modelling
+  - agent-based modelling
+  - electricity investment
+  - optimisation
