@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gb-flexabm"
-version = "0.1.0"
+version = "0.2.0"
 description = "Exploratory electricity investment ABM and shared central-planner benchmark"
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
@@ -16,6 +16,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+gui = ["streamlit==1.62.0"]
 dev = ["pytest>=8,<9", "hypothesis>=6,<7", "ruff>=0.9,<1", "mypy>=1.15,<2", "types-PyYAML", "pandas-stubs"]
 
 [project.scripts]

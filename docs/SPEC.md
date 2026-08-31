@@ -1,6 +1,6 @@
 # Executable scope and acceptance map
 
-This v0.1 implements a bounded first research-software release, not the complete empirical research programme. Source, tests and honest status take precedence over aspirational descriptions.
+Software v0.2 extends the bounded v0.1 foundation with a local workbench and complete-year data checks, not the complete empirical research programme. Source, tests and honest status take precedence over aspirational descriptions.
 
 | Requirement | Implementation | Acceptance evidence |
 |---|---|---|
@@ -11,6 +11,8 @@ This v0.1 implements a bounded first research-software release, not the complete
 | Transfer accounting | `capacity_payment_gbp`, settlement tables | MW→kW property test and transfer totals |
 | Reproduction and audit trails | CLI, provenance, `scripts/reproduce.py` | two-run numerical comparison, tamper rejection, no overwrite |
 | Public-data foundation | optional NESO adapter | offline schema, time/unit, DST and source-hash tests |
+| Complete-year gate | `calendar_coverage`, `require_complete_year` | common/leap years, truncation, wrong-year and rejected partial acquisition |
+| Local GUI | `gui`, `workbench`, `gbflex gui` | real AppTest/CLI replay, saved assumptions, failure/tamper/export checks |
 | Failure is explicit | solver/input contracts | nonoptimal solver rejection, negative/NaN inputs, seed and status checks |
 | Communication | generated report, model card | quantities tied to CSVs; non-claims beside results |
 

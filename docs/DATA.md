@@ -10,7 +10,13 @@ Generation, demand and storage power are MW; energy is MWh; capital is GBP/MW; f
 
 The adapter discovers the exact annual resource from official metadata and stores an immutable SHA-256-named copy with metadata and a manifest. It retains original settlement labels and maps half-hour settlement periods to UTC using Europe/London midnight boundaries: 46 at spring DST, 50 at autumn DST and 48 normally. Duplicate and missing internal intervals, fractional periods, missing fields, negative/nonfinite ND and unsupported date formats fail rather than being imputed.
 
-The boundary is NESO **National Demand (ND)**, not total end-use electricity demand. Its exclusions include specified station load, storage pumping and interconnector exports. Inspect publisher documentation before combining it with generation or pricing series. Current processing checks continuity of supplied observations; it does not infer missing leading/trailing days from a dataset title. Validate calendar coverage before an empirical study.
+The boundary is NESO **National Demand (ND)**, not total end-use electricity demand. Its exclusions include specified station load, storage pumping and interconnector exports. Inspect publisher documentation before combining it with generation or pricing series.
+
+Software v0.2 adds an explicit whole-year gate: `gbflex data validate --manifest PATH --year YEAR` requires every ordered half-hour from 1 January 00:00 UTC through the next 1 January (exclusive). GB calendar-year boundaries fall in GMT; settlement conversion still uses Europe/London DST. Expected duration is 8,760 hours in common years and 8,784 in leap years. Missing leading/trailing days, gaps, duplicates, wrong-year data or reordered timestamps fail. Acquisition declares its requested year and applies this gate automatically, including when reusing cached bytes. A partial current-year dataset therefore cannot pass annual validation; no imputation occurs. Rejected acquired bytes/metadata remain for diagnosis, with failed coverage recorded.
+
+Older manifests without `calendar_year` remain compatible with basic integrity checks; pass `--year` to enforce annual coverage. Revalidation recomputes coverage from raw data, not the stored coverage summary, and checks recorded row/duration totals. Calendar completeness does not establish accuracy, product comparability or representativeness.
+
+The 2024 file has already been inspected for ingestion/annual totals. Record that prior exposure when defining training/validation/holdout windows; no untouched holdout or frozen access protocol is claimed. Historical fleet, prices, fuel/carbon, costs and availability are still needed for S2.
 
 Raw acquisition and metadata stay in ignored `data/raw/`; they are not relicensed as MIT. The manifest preserves upstream licence metadata. Network failures or publisher schema changes are explicit errors, not a reason to use synthetic data without labelling it.
 

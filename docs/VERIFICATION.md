@@ -47,4 +47,16 @@ Both cases pass balance/storage/objective checks. Maximum power-balance residual
 - Python 3.13 CI explicitly selects the matrix interpreter through `UV_PYTHON`, overriding the repository's default `.python-version` (3.12). This prevents an accidental environment replacement from masking the intended version test.
 - The locked Matplotlib version emits upstream Pyparsing deprecation warnings. These are visible and do not fail the numerical tests; they are not suppressed as part of verification.
 
+## S1 / software v0.2 — local workbench and data completeness (31 August 2026)
+
+- Local Python 3.12: **77 tests pass**, Ruff lint/format pass, and mypy passes for 11 source files. GUI tests use the pinned Streamlit 1.62.0 optional extra. The 14 existing Matplotlib/Pyparsing deprecation warnings remain visible.
+- A real Streamlit AppTest runs a 24-period, two-year, one-seed paired experiment and numerically compares all CSV outputs with `cli.run_demo` using identical saved configuration/seeds. The tests also cover failed reruns, modified result files, missing manifest entries, export scope, run locking and control bounds.
+- Browser acceptance executed a 24-period, three-year, two-seed experiment with 22.5 GW base demand; the GUI displayed saved assumptions, resource comparisons, generated plots and export controls. The data tab accepted the existing 2024 manifest and rejected a requested 2023 year. The delivery-plan tab and saved-run controls were inspected. These are functional checks, not new empirical results.
+- Whole-year validation of the previously acquired 2024 NESO snapshot passed: 17,568 ordered half-hours, 8,784 hours, no missing/unexpected/duplicate intervals, first UTC interval `2024-01-01T00:00:00+00:00`, last `2024-12-31T23:30:00+00:00`. Its raw SHA-256 and ND total remain unchanged. No new observations were fitted or substituted into the model.
+- Browser review identified dim captions and low-contrast JSON/code syntax defaults. The light workbench now explicitly styles those text surfaces and status messages. The portfolio's 120 sampled case-study text elements passed the computed foreground/background contrast probe; this is a targeted check, not a full accessibility certification.
+- The original v0.1 experiment and both benchmark bundles still pass integrity verification. They are preserved historical evidence with their original source identity, not regenerated v0.2 artifacts.
+- CI installs the optional GUI extra and runs real AppTest checks on Python 3.12 Linux/Windows and 3.13 Linux. Use the linked live workflow for the current remote result. Portfolio static checks pass for 77 HTML pages, 60 JavaScript files and 23 JSON files.
+
+S2 remains unimplemented: historical input/target bundles and split-access protection must precede calibration. Previous inspection of 2024 demand is recorded in the roadmap; no pristine holdout is claimed.
+
 Read the [model card](MODEL_CARD.md) and [roadmap](ROADMAP.md) before interpreting or extending these results.

@@ -1,4 +1,4 @@
-# Model card — v0.1
+# Model card — software v0.2, exploratory maturity
 
 ## Status and intended use
 
@@ -15,6 +15,8 @@ The initial fleet deliberately creates scarcity. High unserved energy or prices 
 Capacity, investment decisions, prices, unserved energy, deterministic weighted scarcity hours, emissions, curtailment, settlement cashflows and discounted resource cost. Seed quantiles describe variation under the configured artificial expectation noise; they are not calibrated uncertainty intervals. Capacity payments are transfers, excluded from resource costs. A planner–ABM cost gap includes differences in foresight, finance and decision rules; it is not a causal estimate of market failure.
 
 ## Verification versus validation
+
+The v0.2 GUI invokes the same synthetic model and displays saved assumptions. Its quick-run default uses 24 periods; users can select 48 or the CLI default of 168. UI usability and complete-year demand checks do not establish historical accuracy. See `WORKBENCH.md`.
 
 Analytical dispatch/dual oracles, storage balance, objective reconstruction, vintage accounting, seeded replay and metamorphic checks establish selected internal properties. They do not establish external realism. NESO ingestion verification is separate from modelling: those observations are not substituted into the synthetic experiment. See the acceptance map and roadmap.
 

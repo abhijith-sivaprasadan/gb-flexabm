@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 
 from .agents import Investor
-from .data import CATALOG, fetch_neso, validate_data_manifest
+from .data import CATALOG, calendar_coverage, fetch_neso, validate_data_manifest
 from .optimisation import dispatch, planner
 from .provenance import verify_run, write_manifest
 from .reporting import build_report
@@ -213,6 +213,10 @@ def parser() -> argparse.ArgumentParser:
     fetch.add_argument("--output", type=Path, default=Path("data/raw"))
     check = data.add_parser("validate")
     check.add_argument("--manifest", type=Path, required=True)
+    check.add_argument("--year", type=int, help="Require the complete declared calendar year")
+    gui = sub.add_parser("gui", help="Launch the optional local experiment workbench")
+    gui.add_argument("--port", type=int, default=8501)
+    gui.add_argument("--output", type=Path, default=Path("runs/gui"))
     export = sub.add_parser("config")
     export.add_argument("--output", type=Path, required=True)
     return root
@@ -262,12 +266,21 @@ def main(argv: list[str] | None = None) -> int:
             with args.output.open("x", encoding="utf-8") as stream:
                 yaml.safe_dump(default_config(), stream, sort_keys=False)
             print(args.output)
+        elif args.command == "gui":
+            from .workbench import launch
+
+            return launch(args.port, args.output)
         elif args.action == "catalog":
             print(json.dumps(CATALOG, indent=2))
         elif args.action == "fetch":
             print(fetch_neso(args.year, args.output))
         elif args.action == "validate":
-            frame = validate_data_manifest(args.manifest)
+            frame = validate_data_manifest(args.manifest, expected_year=args.year)
+            year = (
+                args.year
+                if args.year is not None
+                else json.loads(args.manifest.read_text(encoding="utf-8")).get("calendar_year")
+            )
             print(
                 json.dumps(
                     {
@@ -276,6 +289,9 @@ def main(argv: list[str] | None = None) -> int:
                         "national_demand_mwh": float(
                             (frame.national_demand_mw * frame.duration_hours).sum()
                         ),
+                        "calendar_coverage": calendar_coverage(frame, year)
+                        if year is not None
+                        else None,
                     }
                 )
             )
