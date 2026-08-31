@@ -33,8 +33,8 @@ CATALOG = {
     "dukes": {"publisher": "DESNZ", "status": "planned"},
     "era5": {
         "publisher": "Copernicus",
-        "status": "planned",
-        "boundary": "Weather-derived availability, not observed curtailed output.",
+        "status": "raw monthly acquisition implemented; conversion pending",
+        "boundary": "Raw ERA5 weather; fleet-weighted availability conversion still required.",
     },
 }
 

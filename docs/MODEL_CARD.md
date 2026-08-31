@@ -1,4 +1,4 @@
-# Model card — software v0.2, exploratory maturity
+# Model card — software v0.3, exploratory maturity
 
 ## Status and intended use
 
@@ -21,6 +21,8 @@ The v0.2 GUI invokes the same synthetic model and displays saved assumptions. It
 Analytical dispatch/dual oracles, storage balance, objective reconstruction, vintage accounting, seeded replay and metamorphic checks establish selected internal properties. They do not establish external realism. NESO ingestion verification is separate from modelling: those observations are not substituted into the synthetic experiment. See the acceptance map and roadmap.
 
 ## Important omissions
+
+The v0.3 historical-data tools are separate from the synthetic simulation. ERA5 acquisition, guarded table access, medoid/error diagnostics, grid-search records and evaluation metrics do not establish historical realism. The candidate-search runner requires a supplied predictor; no validated historical institutional predictor or no-fit evaluation runner is supplied. CM/CfD transfer helpers take already-eligible quantities and are not official contract rules. See `HISTORICAL_DATA.md` for unfinished S2–S5 gates.
 
 No transmission, unit commitment, ramps, integer projects after allocation, forced outages, probabilistic LOLE, official Capacity Market auction, CfD, endogenous fuel/carbon prices, heat or hydrogen coupling, trained behavioural parameters, holdout validation, welfare decomposition or policy recommendation. Storage capacity is not optimised. There is no Mesa dependency: the small investor population is orchestrated directly in Python.
 

@@ -11,6 +11,7 @@ import yaml
 
 from gb_flexabm import __version__
 from gb_flexabm.data import CATALOG, calendar_coverage, validate_data_manifest
+from gb_flexabm.era5 import AREA, GROUPS
 from gb_flexabm.workbench import create_run, read_result, run_bundle, saved_runs, scenario, seed_set
 
 
@@ -133,13 +134,48 @@ def data_readiness() -> None:
         ],
         hide_index=True,
     )
+    with st.expander("ERA5 selection and safe monthly downloads"):
+        st.write(
+            "Reanalysis only · hourly · 0.25° grid · training years 2013–2018. "
+            "72 monthly requests plus one static download; not the entire ERA5 catalogue."
+        )
+        st.caption(
+            f"Working bounding box [north, west, south, east]: {AREA}. Fleet masking is still required."
+        )
+        st.dataframe(
+            pd.DataFrame(
+                [
+                    {"group": group, "variable": variable}
+                    for group, variables in GROUPS.items()
+                    for variable in variables
+                ]
+            ),
+            hide_index=True,
+            height=540,
+        )
+        st.code(
+            "uv sync --locked --extra gui --extra research --extra dev\n"
+            "uv run --locked --extra research python scripts/fetch_era5.py fetch --ids static,2013-01 --limit 2\n"
+            "uv run --locked --extra research python scripts/fetch_era5.py fetch --limit 73",
+            language="shell",
+        )
+        st.warning(
+            "Run acquisition explicitly in a terminal; enter the token at the hidden prompt. "
+            "The GUI never stores or submits credentials. A queued job resumes from its saved ID. "
+            "Raw weather downloads do not complete S2 or establish calibrated availability."
+        )
+        st.link_button(
+            "Full data checklist and download guide",
+            "https://github.com/abhijith-sivaprasadan/gb-flexabm/blob/main/docs/HISTORICAL_DATA.md",
+        )
     st.write(
         "The calendar gate requires every half-hour of the declared year, including leap days "
         "and GB daylight-saving transitions. Checksums alone cannot establish completeness."
     )
     manifests = sorted(Path("data/raw/neso-demand").glob("*/*/manifest.json"))
     with st.form("coverage"):
-        year = st.number_input("Expected calendar year", 1900, 2100, 2024, key="data_year")
+        initial_year = int(manifests[0].parent.parent.name) if manifests else 2024
+        year = st.number_input("Expected calendar year", 1900, 2100, initial_year, key="data_year")
         selected = (
             st.selectbox("Local NESO manifest", manifests, format_func=str) if manifests else None
         )
@@ -204,10 +240,10 @@ def main() -> None:
         st.markdown(
             "- **S0 — Done:** shared dispatch/planner, investors, audit trails and reference experiments.\n"
             "- **S1 — Implemented:** local workbench, calendar coverage gate and delivery contract.\n"
-            "- **S2 — Next:** pinned historical input/target bundle and split protocol.\n"
-            "- **S3 — Pending:** full-year empirical dispatch and representative-period error tests.\n"
-            "- **S4 — Pending:** policy mechanisms, sensitivity screening and calibration.\n"
-            "- **S5 — Pending:** locked validation, holdout and rolling-origin baseline comparisons.\n"
+            "- **S2 — In progress:** training-demand audit, split guards and resumable ERA5 acquisition; full bundle pending.\n"
+            "- **S3 — Utilities tested:** exogenous medoids and storage-reset error diagnostics; empirical baseline pending.\n"
+            "- **S4 — Utilities tested:** trial registry, sensitivity screen and transfer arithmetic; historical institutions/fitting pending.\n"
+            "- **S5 — Utilities tested:** lock checks, seed and baseline metrics; locked evaluation and independent review pending.\n"
             "- **S6 — Pending:** separately verified network, flexibility, heat and hydrogen extensions."
         )
         st.write(

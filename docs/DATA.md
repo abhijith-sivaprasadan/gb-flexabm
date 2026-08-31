@@ -29,4 +29,8 @@ The official download redirects to a specific NESO Cloudflare R2 object-store ac
 - [NESO Open Licence](https://www.neso.energy/data-portal/ngeso-open-licence): publisher terms; check these before redistribution or derived publication.
 - [Pyomo solver recipes](https://pyomo.readthedocs.io/en/stable/howto/solver_recipes.html): optimal termination and explicit solution loading.
 
-Elexon wholesale Market Index data, DUKES fleet data and ERA5-derived availability are **planned, not fetched or used**. Do not substitute imbalance System Prices for a wholesale-price calibration target. Such integration needs documented product/units, licences, time alignment and independent holdout validation.
+## S2 acquisition tooling (v0.3)
+
+The 2013–2018 NESO training snapshots have been acquired and audited for complete annual coverage and energy-conserving hourly aggregation. `gbflex study audit-demand` reads only training years. ERA5 now has a bounded monthly downloader with saved remote job IDs, immutable raw snapshots, unit/grid/timestamp checks and a 73-request training plan. It does not convert weather into availability or feed historical observations into the demo.
+
+Elexon wholesale Market Index and DUKES fleet integration remain pending. Do not substitute imbalance System Prices for wholesale-price targets. January 1 API probes returned no MID records for 2013/2016 and records for 2018; this is not a full-year coverage finding. The [full checklist](HISTORICAL_DATA.md) specifies inputs, raw-weather selection and source contracts. Prior 2024 demand exposure remains recorded in the draft protocol.

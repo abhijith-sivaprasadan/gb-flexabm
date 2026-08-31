@@ -2,19 +2,19 @@
 
 The current release is a usable exploratory foundation. The larger research programme is not marked complete.
 
-Updated 31 August 2026. The high-level roadmap below is now broken into executable milestones. **Software v0.2 remains scientifically exploratory.** A GUI does not advance the model to calibrated or predictive status.
+Updated 31 August 2026. **Software v0.3 remains scientifically exploratory.** A GUI, downloader or metric utility does not advance the model to calibrated or predictive status. See [the exact acquisition checklist](HISTORICAL_DATA.md).
 
 ## Current position against the research plan
 
 | Workstream | Current evidence | Status |
 |---|---|---|
 | Repository contracts | MIT, citation, schemas, locked environment, CLI, manifests, tests and cross-platform CI | Delivered for exploratory scope |
-| Official data | NESO demand acquisition, immutable hashes, UTC/DST and complete-year gate | Partial: other historical inputs and targets missing |
+| Official data | Training NESO audit and bounded/resumable ERA5 jobs with NetCDF checks | Partial: complete weather acquisition/conversion and other historical inputs/targets pending |
 | Dispatch and planner | Shared single-node LP, storage, vintages, dual prices and objective checks | Delivered for synthetic electricity experiments |
 | Investors and markets | Adaptive investors, budgets, construction/retirement and fixed payment | Partial: official CM/CfD and empirical behaviour missing |
-| Time reduction | Measured 168/8,760-period synthetic dispatch; repeated short blocks | Partial: no empirical approximation or annual ABM validation |
+| Time reduction | Exogenous medoids/extremes and independent-day versus linked-storage diagnostics | Utilities tested on authored fixtures; no empirical approximation or annual ABM validation |
 | GUI | Configure, run, reopen, inspect and export the same engine; data coverage checks | S1 implemented |
-| Calibration and locked validation | No fitted parameters or historical skill metrics | Not started |
+| Calibration and locked validation | Split guards, trial registry, sensitivity, lock checks and evaluation metrics | Utilities only; no historical fitting or locked evaluation |
 | Networks, heat and hydrogen | Not implemented | Deferred |
 
 The 20-seed reference experiment and numerical replay are not a seed-convergence study. Its zero physical response to the capacity payment is preserved, not tuned away.
@@ -27,19 +27,19 @@ Use S-identifiers to separate delivery from scientific maturity. The research br
 |---|---|---|
 | **S0 — Exploratory foundation** | Shared dispatch/planner, investor/vintage engine, reference experiment, analytical/property tests and non-claims | Done in v0.1 |
 | **S1 — Experiment workbench** | Local GUI/CLI numerical-equivalence test; failure/tamper/export checks; complete-year demand gate; documentation/publication contract | Implemented in v0.2; see `WORKBENCH.md` and CI |
-| **S2 — Historical bundle and split protocol** | Pinned demand, fleet, costs, fuel/carbon, wholesale targets and weather availability; licences/units/vintages/money basis; coverage report and enforced split-access rules | **Next — not implemented** |
-| **S3 — Empirical dispatch and time reduction** | Historical full-year benchmark; generation/price baselines; exogenous-only medoids plus extremes; reduced/full-year energy, peaks, cost and storage errors | Pending S2 |
-| **S4 — Institutions and calibration** | Historical CM/CfD, sensitivity screen, identifiable behavioural parameters, common seeds, all trials recorded and parameters locked | Pending S2–S3 |
-| **S5 — Locked research evaluation** | No-fit validation/holdout, seed convergence, rolling-origin baseline comparisons, failures published and independent review | Pending S4 |
+| **S2 — Historical bundle and split protocol** | Pinned demand, fleet, costs, fuel/carbon, wholesale targets and weather availability; licences/units/vintages/money basis; coverage report and enforced split-access rules | **In progress: partial tooling in v0.3; full bundle missing** |
+| **S3 — Empirical dispatch and time reduction** | Historical full-year benchmark; generation/price baselines; exogenous-only medoids plus extremes; reduced/full-year energy, peaks, cost and storage errors | Medoid/dispatch diagnostics implemented; historical evidence pending S2 |
+| **S4 — Institutions and calibration** | Historical CM/CfD, sensitivity screen, identifiable behavioural parameters, common seeds, all trials recorded and parameters locked | Trial/sensitivity and transfer arithmetic implemented; institutions, historical predictor, fitting and lock pending |
+| **S5 — Locked research evaluation** | No-fit validation/holdout, seed convergence, rolling-origin baseline comparisons, failures published and independent review | Lock checks/evaluation metrics implemented; no-fit runner, historical evidence and independent review pending |
 | **S6 — Integrated energy** | Zonal/PyPSA-GB, flexibility, probabilistic adequacy and then heat/hydrogen with shared energy balances and separate empirical gates | Deferred |
 
-S2 will use reviewable slices: (a) historical demand and explicit series contracts; (b) fleet/cost and price/weather inputs; (c) versioned bundles and split-access tests. Do not fit with a demand-only dataset. Specify imports, embedded generation, availability versus curtailed output, price products and monetary base year. Elexon/DUKES/ERA5 connectors are not complete today.
+S2 uses reviewable slices: (a) historical demand and explicit series contracts; (b) fleet/cost and price/weather inputs; (c) versioned bundles and split-access tests. Do not fit with a demand-only dataset. Specify imports, embedded generation, availability versus curtailed output, price products and monetary base year. ERA5 raw acquisition is implemented; weather-to-power conversion and Elexon/DUKES integration remain incomplete.
 
 ### Historical split and prior exposure
 
 Proposed windows: 2013–2018 training, 2019–2021 internal validation, 2022–2025 final evaluation. These are **not frozen or preregistered**. Assess coverage and forecast-origin vintages first. Calibration code must receive training observations only; future tests must reject later observations.
 
-**2024 NESO demand has already been inspected** for ingestion and annual totals. Record that exposure; do not describe the entire proposed final window as pristine/untouched. This has not fitted behaviour, but no holdout-access guard or calibration pipeline exists yet. Distinguish explanatory backcasts (realised inputs) from forecast-origin backtests (information available then); only the latter can support predictive-skill claims.
+**2024 NESO demand has already been inspected** for ingestion and annual totals. Record that exposure; do not describe the entire proposed final window as pristine/untouched. No behaviour has been fitted. New table-access guards check phase before opening observations, but are not an OS security boundary; the historical calibration/evaluation pipeline remains incomplete. Distinguish explanatory backcasts (realised inputs) from forecast-origin backtests (information available then); only the latter can support predictive-skill claims.
 
 Before S3–S5, freeze metrics/baselines in a versioned protocol. The brief's thresholds are proposed project gates, not universal standards: for example annual-demand aggregation error <1%, dispatch-cost approximation error <3%, generation-share MAE ≤3 percentage points. Publish failures. Full-year chronology, scarcity tails, linked storage and multiple weather years need separate tests. One hundred seeds is a proposed starting point, not a magic validation threshold.
 

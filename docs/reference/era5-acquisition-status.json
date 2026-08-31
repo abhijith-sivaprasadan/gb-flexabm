@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "d817889f9149cdef2194d02a964d07ff6da38855f0e6d301e131573816f97e9d",
+  "generated_at_utc": "2026-08-31T13:16:06.071442+00:00",
+  "requests": [
+    {
+      "id": "static",
+      "status": "verified",
+      "files": {
+        "source.zip": "1b3e22a0a63c59a41a70199e61cd50c7187035a3f52e6103ff88c150127e5e8c",
+        "data_stream-oper_stepType-instant.nc": "d04705224f1bc84dbf1cb6a5a0c5fdb0bf925fe10377ab3714a2f00b333bf93b"
+      },
+      "coverage": {
+        "complete": true,
+        "variables": {
+          "z": {
+            "units": "m**2 s**-2",
+            "hours": 1,
+            "missing_values": 0,
+            "finite_values": 3185
+          },
+          "lsm": {
+            "units": "(0 - 1)",
+            "hours": 1,
+            "missing_values": 0,
+            "finite_values": 3185
+          }
+        },
+        "hours": 1,
+        "grid_cells": 3185,
+        "source_time_basis": "ERA5 validity time in UTC; accumulated radiation retains J/m2; no conversion/alignment yet"
+      }
+    },
+    {
+      "id": "2013-01",
+      "status": "verified",
+      "files": {
+        "source.zip": "a5244ad3025f0f66d1a72cb958ae3f3346e42feed4d332d5eab8a4e03baaf7fd",
+        "data_stream-oper_stepType-instant.nc": "b9c7358911013a0416da1c31f3e61469ac4afeb65bbd095679e4d21a1c672b83",
+        "data_stream-oper_stepType-accum.nc": "ffd8022b7df94816cc9c3455d86a3bafbc6fa07d47a4017a7cdbb0a6a41e70f0"
+      },
+      "coverage": {
+        "complete": true,
+        "variables": {
+          "u100": {
+            "units": "m s**-1",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "v100": {
+            "units": "m s**-1",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "u10": {
+            "units": "m s**-1",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "v10": {
+            "units": "m s**-1",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "fsr": {
+            "units": "m",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "t2m": {
+            "units": "K",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "d2m": {
+            "units": "K",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "stl4": {
+            "units": "K",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "ssrd": {
+            "units": "J m**-2",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "ssr": {
+            "units": "J m**-2",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "fdir": {
+            "units": "J m**-2",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          },
+          "tisr": {
+            "units": "J m**-2",
+            "hours": 744,
+            "missing_values": 0,
+            "finite_values": 2369640
+          }
+        },
+        "hours": 744,
+        "grid_cells": 3185,
+        "source_time_basis": "ERA5 validity time in UTC; accumulated radiation retains J/m2; no conversion/alignment yet"
+      }
+    },
+    {
+      "id": "2013-02",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-03",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-04",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-05",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-06",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-07",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-08",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-09",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-10",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-11",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2013-12",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-01",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-02",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-03",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-04",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-05",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-06",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-07",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-08",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-09",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-10",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-11",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2014-12",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-01",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-02",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-03",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-04",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-05",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-06",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-07",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-08",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-09",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-10",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-11",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2015-12",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-01",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-02",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-03",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-04",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-05",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-06",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-07",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-08",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-09",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-10",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-11",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2016-12",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-01",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-02",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-03",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-04",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-05",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-06",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-07",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-08",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-09",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-10",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-11",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2017-12",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-01",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-02",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-03",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-04",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-05",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-06",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-07",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-08",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-09",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-10",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-11",
+      "status": "not_acquired"
+    },
+    {
+      "id": "2018-12",
+      "status": "not_acquired"
+    }
+  ],
+  "verified_requests": 2,
+  "planned_requests": 73,
+  "full_historical_bundle_complete": false,
+  "scientific_status": "raw_weather_not_capacity_factors_or_model_validation"
+}

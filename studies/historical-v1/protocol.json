@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "study_id": "gb-historical-v1",
+  "status": "draft",
+  "mode": "explanatory_backcast",
+  "money_base_year": 2025,
+  "splits": {
+    "train": [2013, 2014, 2015, 2016, 2017, 2018],
+    "validation": [2019, 2020, 2021],
+    "holdout": [2022, 2023, 2024, 2025]
+  },
+  "prior_exposure": [
+    {"source": "NESO demand", "year": 2024, "purpose": "ingestion, calendar and annual-total verification before split guard"},
+    {"source": "NESO demand", "years": [2013, 2014, 2015, 2016, 2017, 2018], "purpose": "training-window source acquisition and completeness audit"},
+    {"source": "Elexon MID", "years": [2013, 2016, 2018], "purpose": "January 1 training-window API coverage probes"}
+  ],
+  "metrics": {
+    "demand_aggregation_relative_error_lt": 0.01,
+    "dispatch_cost_approximation_relative_error_lt": 0.03,
+    "generation_share_mae_percentage_points_lte": 3.0,
+    "monthly_price_nmae_lte": 0.20,
+    "price_ks_distance_lte": 0.15,
+    "capacity_share_mae_percentage_points_lte": 5.0,
+    "total_capacity_relative_error_lte": 0.05,
+    "capacity_wmape_lte": 0.15,
+    "rolling_origin_improvement_gte": 0.10,
+    "rolling_origin_win_fraction_gte": 0.70,
+    "seed_minimum": 100
+  },
+  "baselines": ["capacity persistence", "training-only linear capacity trend"],
+  "freeze_conditions": [
+    "All required historical inputs, products, boundaries, licences and vintages verified",
+    "Wholesale price coverage gaps resolved without silently shifting windows",
+    "Weather-to-power conversion and historical fleet mapping documented",
+    "Legacy RO assets explicitly represented or locked exogenous",
+    "Metric definitions, calibration search space, seed convergence tolerances and reviewer agreed before fitting"
+  ],
+  "independent_review": "pending; repository CI is not scientific peer review"
+}

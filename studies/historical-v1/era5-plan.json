@@ -1,0 +1,7230 @@
+{
+  "schema_version": 1,
+  "dataset": "reanalysis-era5-single-levels",
+  "protocol_sha256": "6ec4e7eec6a908bb3f90fbf759670af1c179f602c0fc07557a2099d64c9d7f2e",
+  "phase": "train",
+  "groups": {
+    "wind": [
+      "100m_u_component_of_wind",
+      "100m_v_component_of_wind",
+      "10m_u_component_of_wind",
+      "10m_v_component_of_wind",
+      "forecast_surface_roughness"
+    ],
+    "solar": [
+      "surface_solar_radiation_downwards",
+      "surface_net_solar_radiation",
+      "total_sky_direct_solar_radiation_at_surface",
+      "toa_incident_solar_radiation"
+    ],
+    "temperature": [
+      "2m_temperature",
+      "2m_dewpoint_temperature",
+      "soil_temperature_level_4"
+    ],
+    "static": [
+      "geopotential",
+      "land_sea_mask"
+    ]
+  },
+  "requests": [
+    {
+      "id": "static",
+      "kind": "static",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "geopotential",
+          "land_sea_mask"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01"
+        ],
+        "time": [
+          "00:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-01",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-02",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-03",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-04",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "04"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-05",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "05"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-06",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "06"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-07",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-08",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-09",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "09"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-10",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "10"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-11",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "11"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2013-12",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-01",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-02",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-03",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-04",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "04"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-05",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "05"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-06",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "06"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-07",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-08",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-09",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "09"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-10",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "10"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-11",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "11"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2014-12",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-01",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-02",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-03",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-04",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "04"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-05",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "05"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-06",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "06"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-07",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-08",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-09",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "09"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-10",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "10"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-11",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "11"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2015-12",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-01",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-02",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-03",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-04",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "04"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-05",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "05"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-06",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "06"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-07",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-08",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-09",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "09"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-10",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "10"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-11",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "11"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2016-12",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-01",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-02",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-03",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-04",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "04"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-05",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "05"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-06",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "06"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-07",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-08",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-09",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "09"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-10",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "10"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-11",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "11"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2017-12",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-01",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-02",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-03",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-04",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "04"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-05",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "05"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-06",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "06"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-07",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-08",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-09",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "09"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-10",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "10"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-11",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "11"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    },
+    {
+      "id": "2018-12",
+      "kind": "monthly",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_solar_radiation_downwards",
+          "surface_net_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface",
+          "toa_incident_solar_radiation",
+          "2m_temperature",
+          "2m_dewpoint_temperature",
+          "soil_temperature_level_4"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "area": [
+          61,
+          -12,
+          49,
+          4
+        ],
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip"
+      }
+    }
+  ],
+  "note": "Raw weather only; land/fleet masking, conversion, source attribution and empirical validation remain separate.",
+  "plan_sha256": "d817889f9149cdef2194d02a964d07ff6da38855f0e6d301e131573816f97e9d"
+}

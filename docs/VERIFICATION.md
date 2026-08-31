@@ -57,6 +57,18 @@ Both cases pass balance/storage/objective checks. Maximum power-balance residual
 - The original v0.1 experiment and both benchmark bundles still pass integrity verification. They are preserved historical evidence with their original source identity, not regenerated v0.2 artifacts.
 - CI installs the optional GUI extra and runs real AppTest checks on Python 3.12 Linux/Windows and 3.13 Linux. Use the linked live workflow for the current remote result. Portfolio static checks pass for 77 HTML pages, 60 JavaScript files and 23 JSON files.
 
-S2 remains unimplemented: historical input/target bundles and split-access protection must precede calibration. Previous inspection of 2024 demand is recorded in the roadmap; no pristine holdout is claimed.
+At the S1 release, S2 remained unimplemented. Subsequent partial tooling is recorded below; previous inspection of 2024 demand remains disclosed and no pristine holdout is claimed.
+
+## S2 data tooling / software v0.3 (31 August 2026)
+
+- Local Python 3.12: **117 tests pass**, Ruff lint/format and mypy pass (16 source files). The 14 upstream Matplotlib/Pyparsing warnings remain visible. CI installs optional research dependencies but all tests use authored local fixtures/mocked jobs, not live services.
+- [Training-demand audit](reference/training-demand-audit.json): all six years 2013–2018 have complete ordered half-hour coverage, no missing/duplicate/unexpected intervals, and zero energy error when aggregated to hourly means. Raw hashes are recorded; this is ingestion evidence, not historical model validation.
+- [ERA5 acquisition snapshot](reference/era5-acquisition-status.json): static geopotential/land-sea mask and January 2013 were downloaded and verified. January contains 12 fields × 744 hours × 3,185 cells, with no missing values. This timestamped snapshot records **2 of 73** plan requests, not completion of the full training-weather acquisition. Public evidence excludes tokens, local private paths and remote job IDs.
+- Resume tests prove a saved remote job is reused rather than resubmitted; cached content is rechecked. NetCDF tests reject wrong timestamps/grid/units, missing fields and altered files. Archive tests reject traversal/unexpected members. The bounded plan cannot be widened to holdout years by merely recomputing its checksum.
+- Study tests reject phase violations before any observation read, invalid parameter-lock hashes, out-of-origin vintages and cross-year table contents. Candidate search logs failed seeds without exposing arbitrary callback exception text; it does not issue a scientific lock.
+- Exogenous medoid tests preserve hours and forced extremes. A real LP test compares independent-day and linked storage chronology. Constant-response/confounded sensitivity tests and zero-denominator/seed/baseline tests preserve failed or undefined metrics. These are authored numerical oracles, not empirical S3–S5 evidence.
+- Real Streamlit AppTest still numerically matches the CLI and checks exports/failures. Browser review confirms the acquisition list, hidden-token terminal instructions, selected training-demand year and explicit pending-stage labels. Each weather variable occupies its own readable row; no credential field was added to the GUI.
+- A targeted light-theme DOM-text probe checked the GUI and portfolio. It identified a low-contrast footer link on the case study; that link now uses dark blue. Canvas-rendered dataframe text was inspected visually, not included in DOM contrast arithmetic. This is not a full accessibility certification.
+- The original v0.1 experiment and both synthetic benchmark bundles still pass integrity checks and remain unchanged. The full historical bundle, weather conversion, institutional predictor, historical fitting/locking, no-fit evaluation and independent scientific review remain pending.
 
 Read the [model card](MODEL_CARD.md) and [roadmap](ROADMAP.md) before interpreting or extending these results.

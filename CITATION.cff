@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Sivaprasadan
     given-names: Abhijith
-version: 0.2.0
+version: 0.3.0
 license: MIT
 repository-code: "https://github.com/abhijith-sivaprasadan/gb-flexabm"
 keywords:

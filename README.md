@@ -4,7 +4,7 @@
 
 **An executable electricity investment experiment: heterogeneous investors versus a perfect-foresight central planner, using the same physical dispatch model.**
 
-Scientific status: **exploratory, synthetic and uncalibrated (software v0.2)**. The GB label describes the intended research context and optional NESO data adapter, not a validated representation of Great Britain. This is independent portfolio research software, not an official market model, university project or investment tool.
+Scientific status: **exploratory, synthetic and uncalibrated (software v0.3)**. The GB label describes the intended research context and optional historical-data tooling, not a validated representation of Great Britain. This is independent portfolio research software, not an official market model, university project or investment tool.
 
 ## Research question
 
@@ -26,8 +26,8 @@ The implementation includes:
 |---|---|
 | S0 — Shared model, investor engine, audit trails and reference experiment | Done, v0.1 |
 | S1 — Local GUI, whole-year demand gate and delivery workflow | Implemented, v0.2 |
-| S2 — Historical input/target bundle and split-access protocol | **Next; not implemented** |
-| S3–S5 — Empirical dispatch, calibration, locked validation and predictive baselines | Pending |
+| S2 — Historical input/target bundle and split-access protocol | **In progress:** training-demand audit, split guards and resumable ERA5 acquisition; full bundle pending |
+| S3–S5 — Empirical dispatch, calibration, locked validation and predictive baselines | Supporting utilities tested; historical institutions, fitting, evidence and independent evaluation pending |
 | S6 — Zonal, flexibility, heat and hydrogen extensions | Deferred |
 
 The [delivery plan](docs/ROADMAP.md) maps completed work to the research brief and defines acceptance criteria. Every milestone must update **this README and the [portfolio page](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html)**, pass checks, and be committed/pushed with CI and Pages verified. See [maintainer instructions](AGENTS.md).
@@ -82,6 +82,18 @@ The script runs 20 paired seeds, repeats the experiment and verifies the numeric
 Export editable assumptions with `uv run --locked gbflex config --output my-scenario.yaml`, then pass `--config my-scenario.yaml` to `demo run`. Values carry explicit units and an assumption-source statement.
 
 ## Optional observed-data acquisition
+
+New in v0.3: the [complete historical-data checklist](docs/HISTORICAL_DATA.md), training-only bundle/split guards, exogenous medoid/dispatch diagnostics, candidate/trial and sensitivity records, and evaluation metrics. These utilities do not establish historical calibration. The ERA5 plan contains **72 monthly 2013–2018 requests plus one static download** over a GB/offshore bounding box: 12 hourly wind/solar/temperature fields, not the whole catalogue.
+
+```sh
+uv sync --locked --extra dev --extra gui --extra research
+uv run --locked --extra research python scripts/fetch_era5.py fetch --ids static,2013-01 --limit 2
+# Process/resume the full training plan; enter the token at the hidden prompt:
+uv run --locked --extra research python scripts/fetch_era5.py fetch --limit 73
+uv run --locked gbflex study audit-demand --protocol studies/historical-v1/protocol.json --output runs/training-demand-audit.json
+```
+
+ERA5 commands are explicit network operations, never called by the experiment or offline tests. Jobs retain their remote IDs; cached NetCDFs are checked for hashes, units, timestamps and grid coverage. Credentials stay out of repository files. Raw weather still needs fleet-weighted wind/PV conversion. Use a fresh audit output path. See the guide for queue exit codes, storage estimates, the exact fields and all non-weather inputs.
 
 ```sh
 uv run --locked gbflex data catalog

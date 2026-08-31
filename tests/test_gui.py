@@ -65,6 +65,14 @@ def test_failed_gui_run_clears_previous_success(app, monkeypatch):
     assert any("Experiment failed" in error.value for error in app.error)
 
 
+def test_gui_lists_every_weather_field_and_no_credential_input(app):
+    table = next(frame.value for frame in app.dataframe if "variable" in frame.value.columns)
+    assert len(table) == 14
+    assert "100m_u_component_of_wind" in table.variable.tolist()
+    assert "land_sea_mask" in table.variable.tolist()
+    assert not app.text_input
+
+
 def test_gui_launcher_is_loopback_and_telemetry_off(tmp_path, monkeypatch):
     captured = {}
 

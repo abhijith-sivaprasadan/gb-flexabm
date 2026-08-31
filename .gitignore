@@ -14,5 +14,8 @@ runs/
 dist/
 build/
 .env
+.env.*
+.cdsapirc
+*.cdsapirc
 .coverage
 htmlcov/

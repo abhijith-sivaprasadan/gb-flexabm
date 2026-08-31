@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "kind": "training_demand_ingestion_not_empirical_model_validation",
+  "protocol_sha256": "6ec4e7eec6a908bb3f90fbf759670af1c179f602c0fc07557a2099d64c9d7f2e",
+  "protocol_status": "draft",
+  "generated_at_utc": "2026-08-31T13:14:31.861018+00:00",
+  "years": [
+    {
+      "calendar_year": 2013,
+      "complete": true,
+      "expected_rows": 17520,
+      "observed_rows": 17520,
+      "expected_hours": 8760.0,
+      "missing_intervals": 0,
+      "unexpected_intervals": 0,
+      "duplicate_intervals": 0,
+      "first_utc": "2013-01-01T00:00:00+00:00",
+      "last_utc": "2013-12-31T23:30:00+00:00",
+      "year": 2013,
+      "sha256": "f9ed1ed7d56d72bd48f633d8b50ca8a1ced981f76e9fa3c3958bb70517303cdb",
+      "national_demand_mwh": 305589299.0,
+      "peak_half_hour_mw": 55572.0,
+      "peak_hourly_mw": 55384.5,
+      "hourly_aggregation_relative_error": 0.0,
+      "aggregation_gate_passed": true
+    },
+    {
+      "calendar_year": 2014,
+      "complete": true,
+      "expected_rows": 17520,
+      "observed_rows": 17520,
+      "expected_hours": 8760.0,
+      "missing_intervals": 0,
+      "unexpected_intervals": 0,
+      "duplicate_intervals": 0,
+      "first_utc": "2014-01-01T00:00:00+00:00",
+      "last_utc": "2014-12-31T23:30:00+00:00",
+      "year": 2014,
+      "sha256": "58fec6fe4cb12866032cc4b128de7d1999c4382796c51289a33a1170d3d934ba",
+      "national_demand_mwh": 290563151.5,
+      "peak_half_hour_mw": 51208.0,
+      "peak_hourly_mw": 51143.0,
+      "hourly_aggregation_relative_error": 0.0,
+      "aggregation_gate_passed": true
+    },
+    {
+      "calendar_year": 2015,
+      "complete": true,
+      "expected_rows": 17520,
+      "observed_rows": 17520,
+      "expected_hours": 8760.0,
+      "missing_intervals": 0,
+      "unexpected_intervals": 0,
+      "duplicate_intervals": 0,
+      "first_utc": "2015-01-01T00:00:00+00:00",
+      "last_utc": "2015-12-31T23:30:00+00:00",
+      "year": 2015,
+      "sha256": "da73a3a41b06f9005654cd4230ef9d906f68478463b1caa1773bdf53c97817be",
+      "national_demand_mwh": 282276459.5,
+      "peak_half_hour_mw": 52516.0,
+      "peak_hourly_mw": 52399.0,
+      "hourly_aggregation_relative_error": 0.0,
+      "aggregation_gate_passed": true
+    },
+    {
+      "calendar_year": 2016,
+      "complete": true,
+      "expected_rows": 17568,
+      "observed_rows": 17568,
+      "expected_hours": 8784.0,
+      "missing_intervals": 0,
+      "unexpected_intervals": 0,
+      "duplicate_intervals": 0,
+      "first_utc": "2016-01-01T00:00:00+00:00",
+      "last_utc": "2016-12-31T23:30:00+00:00",
+      "year": 2016,
+      "sha256": "ec031cca6e7a819de73abd48dc8283dcb2949fabeaa1c06e840b6cea3e8bf3dc",
+      "national_demand_mwh": 275600676.0,
+      "peak_half_hour_mw": 51102.0,
+      "peak_hourly_mw": 50942.0,
+      "hourly_aggregation_relative_error": 0.0,
+      "aggregation_gate_passed": true
+    },
+    {
+      "calendar_year": 2017,
+      "complete": true,
+      "expected_rows": 17520,
+      "observed_rows": 17520,
+      "expected_hours": 8760.0,
+      "missing_intervals": 0,
+      "unexpected_intervals": 0,
+      "duplicate_intervals": 0,
+      "first_utc": "2017-01-01T00:00:00+00:00",
+      "last_utc": "2017-12-31T23:30:00+00:00",
+      "year": 2017,
+      "sha256": "ad6c47de0264aa1183336c7ca438631f90056c41f438c86f34da147a51351de4",
+      "national_demand_mwh": 266068344.5,
+      "peak_half_hour_mw": 49883.0,
+      "peak_hourly_mw": 49748.5,
+      "hourly_aggregation_relative_error": 0.0,
+      "aggregation_gate_passed": true
+    },
+    {
+      "calendar_year": 2018,
+      "complete": true,
+      "expected_rows": 17520,
+      "observed_rows": 17520,
+      "expected_hours": 8760.0,
+      "missing_intervals": 0,
+      "unexpected_intervals": 0,
+      "duplicate_intervals": 0,
+      "first_utc": "2018-01-01T00:00:00+00:00",
+      "last_utc": "2018-12-31T23:30:00+00:00",
+      "year": 2018,
+      "sha256": "a2e19b4eb4157a190d1e7f2c946ee92c4be2ae196f72d55545c870399d3efb2f",
+      "national_demand_mwh": 264961676.0,
+      "peak_half_hour_mw": 49807.0,
+      "peak_hourly_mw": 49513.5,
+      "hourly_aggregation_relative_error": 0.0,
+      "aggregation_gate_passed": true
+    }
+  ],
+  "all_training_demand_complete": true,
+  "S2_complete": false,
+  "missing_roles": [
+    "fleet",
+    "technology_costs",
+    "fuel_carbon",
+    "money_index",
+    "wholesale_price",
+    "generation",
+    "weather_availability",
+    "policy"
+  ],
+  "prior_exposure": [
+    {
+      "purpose": "ingestion, calendar and annual-total verification before split guard",
+      "source": "NESO demand",
+      "year": 2024
+    },
+    {
+      "purpose": "training-window source acquisition and completeness audit",
+      "source": "NESO demand",
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    {
+      "purpose": "January 1 training-window API coverage probes",
+      "source": "Elexon MID",
+      "years": [
+        2013,
+        2016,
+        2018
+      ]
+    }
+  ]
+}

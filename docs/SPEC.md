@@ -1,6 +1,6 @@
 # Executable scope and acceptance map
 
-Software v0.2 extends the bounded v0.1 foundation with a local workbench and complete-year data checks, not the complete empirical research programme. Source, tests and honest status take precedence over aspirational descriptions.
+Software v0.3 extends the exploratory foundation with historical-data tooling, not the complete empirical research programme. Source, tests and honest status take precedence over aspirational descriptions.
 
 | Requirement | Implementation | Acceptance evidence |
 |---|---|---|
@@ -13,6 +13,10 @@ Software v0.2 extends the bounded v0.1 foundation with a local workbench and com
 | Public-data foundation | optional NESO adapter | offline schema, time/unit, DST and source-hash tests |
 | Complete-year gate | `calendar_coverage`, `require_complete_year` | common/leap years, truncation, wrong-year and rejected partial acquisition |
 | Local GUI | `gui`, `workbench`, `gbflex gui` | real AppTest/CLI replay, saved assumptions, failure/tamper/export checks |
+| Bounded ERA5 acquisition | `era5`, `scripts/fetch_era5.py`, committed plan | offline job-resume, ZIP safety, units/grid/calendar/hash checks; separately recorded live pilot |
+| Study split/vintage contract | `study.Protocol`, `StudyBundle` | reject unauthorized years before file access, changed hashes, escaping paths and unavailable vintages |
+| Reduction diagnostics | `diagnostics` | exogenous medoids/extremes, preserved hour counts and real LP storage-reset comparison on authored fixtures |
+| Calibration/evaluation utilities | `calibration`, `research_metrics` | frozen search/common seeds, failure registry, sensitivity, zero-denominator and baseline tests; no empirical-stage pass |
 | Failure is explicit | solver/input contracts | nonoptimal solver rejection, negative/NaN inputs, seed and status checks |
 | Communication | generated report, model card | quantities tied to CSVs; non-claims beside results |
 
