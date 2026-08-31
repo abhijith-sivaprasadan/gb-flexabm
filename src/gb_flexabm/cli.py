@@ -29,6 +29,7 @@ from .schema import (
     system_from_config,
 )
 from .simulation import simulate
+from .study import Protocol, StudyBundle, demand_audit
 
 
 def default_config() -> dict[str, Any]:
@@ -214,6 +215,16 @@ def parser() -> argparse.ArgumentParser:
     check = data.add_parser("validate")
     check.add_argument("--manifest", type=Path, required=True)
     check.add_argument("--year", type=int, help="Require the complete declared calendar year")
+    study = sub.add_parser(
+        "study", help="Historical study readiness; does not run a calibrated model"
+    ).add_subparsers(dest="action", required=True)
+    audit = study.add_parser("audit-demand")
+    audit.add_argument("--protocol", type=Path, required=True)
+    audit.add_argument("--raw", type=Path, default=Path("data/raw/neso-demand"))
+    audit.add_argument("--output", type=Path, required=True)
+    inventory = study.add_parser("inventory")
+    inventory.add_argument("--protocol", type=Path, required=True)
+    inventory.add_argument("--bundle", type=Path, required=True)
     gui = sub.add_parser("gui", help="Launch the optional local experiment workbench")
     gui.add_argument("--port", type=int, default=8501)
     gui.add_argument("--output", type=Path, default=Path("runs/gui"))
@@ -270,6 +281,26 @@ def main(argv: list[str] | None = None) -> int:
             from .workbench import launch
 
             return launch(args.port, args.output)
+        elif args.command == "study":
+            protocol = Protocol.from_dict(json.loads(args.protocol.read_text(encoding="utf-8")))
+            if args.action == "audit-demand":
+                report = demand_audit(protocol, args.raw, args.output)
+                print(
+                    json.dumps(
+                        {
+                            "output": str(args.output),
+                            "training_demand_complete": report["all_training_demand_complete"],
+                            "S2_complete": False,
+                        }
+                    )
+                )
+            else:
+                bundle = StudyBundle(
+                    args.bundle.parent,
+                    json.loads(args.bundle.read_text(encoding="utf-8")),
+                    protocol,
+                )
+                print(json.dumps(bundle.readiness(), indent=2))
         elif args.action == "catalog":
             print(json.dumps(CATALOG, indent=2))
         elif args.action == "fetch":

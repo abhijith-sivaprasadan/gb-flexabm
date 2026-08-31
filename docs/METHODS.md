@@ -1,5 +1,9 @@
 # Methods and accounting
 
+## Historical-study utilities (v0.3)
+
+The synthetic physical/agent engine below is unchanged. Separate study tools implement phase-before-file access, immutable protocol/bundle identities, source-vintage checks, exogenous k-medoids with retained extremes, linked-chronology versus independent-day dispatch errors, common-seed grid-trial records and evaluation metrics. Their assumptions and pending historical integration are specified in [HISTORICAL_DATA.md](HISTORICAL_DATA.md). Representative-day storage resets are explicit; transfer helpers do not implement policy eligibility. No fitted model, parameter lock or empirical S3–S5 pass is claimed.
+
 ## One physical contract
 
 `optimisation._block` builds both dispatch and planner operating constraints. For technology k and period t, generation is nonnegative and bounded by available capacity `a[k,t] * K[k]`. Energy balance in MW is:

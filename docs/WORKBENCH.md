@@ -39,6 +39,6 @@ Matching inputs reproduce numerical CSVs within the stated tolerances. Identity 
 - `tests/test_data.py`: complete common/leap years, DST, truncation, gaps, duplicates, wrong-year/unordered data and rejected partial acquisition.
 - Browser checks and execution results are recorded in `VERIFICATION.md` and CI.
 
-GitHub Pages hosts the [case study](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html#workbench), **not the Python GUI**. S2's historical bundle and split protocol come next, not fitting the synthetic fixture.
+GitHub Pages hosts the [case study](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html#workbench), **not the Python GUI**. In v0.3, Data readiness includes the exact ERA5 variable groups, area, monthly command and full checklist link. Acquisition runs explicitly in a terminal with a hidden token prompt; the GUI never collects credentials or silently downloads. The Delivery plan distinguishes implemented utilities from pending empirical gates. S2's complete historical bundle remains unfinished.
 
 Framework references: [forms](https://docs.streamlit.io/develop/concepts/architecture/forms), [AppTest](https://docs.streamlit.io/develop/api-reference/app-testing/st.testing.v1.apptest), [configuration](https://docs.streamlit.io/develop/api-reference/configuration/config.toml). Streamlit 1.62.0 is pinned in the optional GUI extra; the core CLI does not require it.
