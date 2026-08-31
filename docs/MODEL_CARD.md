@@ -22,6 +22,8 @@ Analytical dispatch/dual oracles, storage balance, objective reconstruction, vin
 
 ## Important omissions
 
+The full 2013–2018 Elexon API acquisition has now been audited. No training price year passes complete coverage; generation also has gaps and source-label defects. These failures are displayed in the GUI and recorded in `MARKET_DATA.md`. Historical fitting has not begun and no missingness or date-window amendment has been silently applied. The NESO generation alternative is publisher-processed, not a pristine metering target.
+
 The v0.3 historical-data tools are separate from the synthetic simulation. ERA5 acquisition, guarded table access, medoid/error diagnostics, grid-search records and evaluation metrics do not establish historical realism. The candidate-search runner requires a supplied predictor; no validated historical institutional predictor or no-fit evaluation runner is supplied. CM/CfD transfer helpers take already-eligible quantities and are not official contract rules. See `HISTORICAL_DATA.md` for unfinished S2–S5 gates.
 
 No transmission, unit commitment, ramps, integer projects after allocation, forced outages, probabilistic LOLE, official Capacity Market auction, CfD, endogenous fuel/carbon prices, heat or hydrogen coupling, trained behavioural parameters, holdout validation, welfare decomposition or policy recommendation. Storage capacity is not optimised. There is no Mesa dependency: the small investor population is orchestrated directly in Python.

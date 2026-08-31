@@ -1,5 +1,6 @@
 """Real Streamlit execution and CLI equivalence; no live web or data APIs."""
 
+import json
 from pathlib import Path
 
 import pytest
@@ -8,6 +9,8 @@ testing = pytest.importorskip("streamlit.testing.v1", reason="Install the option
 
 from gb_flexabm import workbench  # noqa: E402
 from gb_flexabm.cli import compare_runs, run_demo  # noqa: E402
+from gb_flexabm.market_data import audit_market  # noqa: E402
+from gb_flexabm.study import Protocol  # noqa: E402
 
 
 @pytest.fixture
@@ -71,6 +74,35 @@ def test_gui_lists_every_weather_field_and_no_credential_input(app):
     assert "100m_u_component_of_wind" in table.variable.tolist()
     assert "land_sea_mask" in table.variable.tolist()
     assert not app.text_input
+
+
+def test_gui_market_audit_shows_failed_coverage_and_rejects_tamper(app, tmp_path):
+    protocol = Protocol.from_dict(
+        {
+            "schema_version": 1,
+            "status": "draft",
+            "mode": "explanatory_backcast",
+            "money_base_year": 2025,
+            "splits": {"train": [2016], "validation": [2017], "holdout": [2018]},
+            "prior_exposure": ["authored test"],
+            "metrics": {"example": 1},
+            "baselines": ["persistence"],
+        }
+    )
+    path = tmp_path / "docs/reference/training-market-mid.json"
+    report = audit_market(protocol, tmp_path / "raw", "mid", path)
+    app.run()
+    assert not app.exception
+    table = next(
+        frame.value for frame in app.table if "verified response chunks" in frame.value.columns
+    )
+    assert table["calendar coverage complete"].eq("INCOMPLETE").all()
+    assert any("not target readiness" in warning.value for warning in app.warning)
+    report["years"][0]["complete"] = True
+    path.write_text(json.dumps(report))
+    app.run()
+    assert any("Market audit could not be verified" in error.value for error in app.error)
+    assert not any("verified response chunks" in frame.value.columns for frame in app.table)
 
 
 def test_gui_launcher_is_loopback_and_telemetry_off(tmp_path, monkeypatch):
