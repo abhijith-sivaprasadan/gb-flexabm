@@ -4,7 +4,7 @@
 
 **An executable electricity investment experiment: heterogeneous investors versus a perfect-foresight central planner, using the same physical dispatch model.**
 
-Scientific status: **v0.1 exploratory, synthetic and uncalibrated**. The GB label describes the intended research context and optional NESO data adapter, not a validated representation of Great Britain. This is independent portfolio research software, not an official market model, university project or investment tool.
+Scientific status: **exploratory, synthetic and uncalibrated (software v0.2)**. The GB label describes the intended research context and optional NESO data adapter, not a validated representation of Great Britain. This is independent portfolio research software, not an official market model, university project or investment tool.
 
 ## Research question
 
@@ -16,8 +16,32 @@ The implementation includes:
 - A multi-year capacity-expansion LP reusing those physical constraints, with construction lags, retirements and terminal asset value.
 - Technology-specialist investors with adaptive expectations, heterogeneous hurdle rates, finance budgets and named random substreams; simultaneous, pro-rata investment allocation.
 - Paired energy-only / stylised-capacity-payment experiments, CSV audit trails, a generated report and checksum manifests.
-- An **optional**, provenance-preserving official NESO demand adapter with 46/48/50-period daylight-saving checks. Observed data do not feed the synthetic experiment.
+- An **optional local GUI** for configuring paired experiments, reopening runs, inspecting results/provenance and downloading verified ZIP/YAML artifacts.
+- An **optional**, provenance-preserving official NESO demand adapter with 46/48/50-period daylight-saving and whole-calendar-year checks. Observed data do not feed the synthetic experiment.
 - Analytical, property-based and metamorphic tests, locked dependencies and cross-platform CI.
+
+## Current stage and next work
+
+| Stage | Status |
+|---|---|
+| S0 — Shared model, investor engine, audit trails and reference experiment | Done, v0.1 |
+| S1 — Local GUI, whole-year demand gate and delivery workflow | Implemented, v0.2 |
+| S2 — Historical input/target bundle and split-access protocol | **Next; not implemented** |
+| S3–S5 — Empirical dispatch, calibration, locked validation and predictive baselines | Pending |
+| S6 — Zonal, flexibility, heat and hydrogen extensions | Deferred |
+
+The [delivery plan](docs/ROADMAP.md) maps completed work to the research brief and defines acceptance criteria. Every milestone must update **this README and the [portfolio page](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html)**, pass checks, and be committed/pushed with CI and Pages verified. See [maintainer instructions](AGENTS.md).
+
+## Launch the GUI
+
+After cloning (below), run from the repository directory:
+
+```sh
+uv sync --locked --extra dev --extra gui
+uv run --locked --extra gui gbflex gui
+```
+
+Open **http://127.0.0.1:8501**. Configure → run → inspect → download; completed runs stay in `runs/gui/`. Use `--port 8502` if needed. The local-only launcher disables telemetry and supplies a high-contrast light theme. GitHub Pages hosts the case study, not the Python solver. The [workbench guide](docs/WORKBENCH.md) covers controls, limits, integrity and CLI replay. The GUI is optional: core commands below do not require Streamlit.
 
 ## Run offline
 
@@ -62,10 +86,12 @@ Export editable assumptions with `uv run --locked gbflex config --output my-scen
 ```sh
 uv run --locked gbflex data catalog
 uv run --locked gbflex data fetch --source neso-demand --year 2024 --output data/raw
-uv run --locked gbflex data validate --manifest data/raw/neso-demand/2024/RETURNED_HASH/manifest.json
+uv run --locked gbflex data validate --manifest data/raw/neso-demand/2024/RETURNED_HASH/manifest.json --year 2024
 ```
 
 Use the exact manifest path printed by `fetch`. Raw files stay ignored locally, with their source URL, licence metadata, retrieval time and SHA-256. Dataset revisions create new hash directories. No API credential is needed. Upstream availability/schema can change; live acquisition is not part of offline CI.
+
+New acquisitions require the entire requested year, including leap days and DST. Incomplete bytes remain for diagnosis but validation fails; no gaps are imputed. Pass `--year` explicitly for older v0.1 manifests, which did not declare a coverage year. **2024 demand was previously inspected for ingestion tests**; the proposed research holdout is not claimed untouched or preregistered.
 
 ## Read the evidence and boundaries
 
@@ -74,6 +100,7 @@ Use the exact manifest path printed by `fetch`. Raw files stay ignored locally, 
 - [Specification and acceptance map](docs/SPEC.md): implemented scope and test evidence.
 - [Data contracts and sources](docs/DATA.md): demand boundary, units and provenance.
 - [Roadmap](docs/ROADMAP.md): empirical calibration, adequacy, institutional mechanisms and multi-energy research gates.
+- [Local workbench](docs/WORKBENCH.md): GUI setup, evidence export and acceptance tests.
 - [Verification and reference results](docs/VERIFICATION.md): measured benchmarks, replay and the zero-effect stress-fixture finding.
 - [Contributing](CONTRIBUTING.md), [security](SECURITY.md), [code of conduct](CODE_OF_CONDUCT.md), [citation](CITATION.cff).
 

@@ -112,6 +112,42 @@ def parse_neso_demand(path: Path) -> pd.DataFrame:
     return frame.reset_index(drop=True)
 
 
+def calendar_coverage(frame: pd.DataFrame, year: int) -> dict:
+    """Compare with the entire GB settlement calendar, not just the supplied span."""
+    if type(year) is not int or not 1900 <= year <= 2100:
+        raise ValueError("Calendar year must be an integer from 1900 to 2100")
+    expected = pd.date_range(
+        f"{year}-01-01", f"{year + 1}-01-01", freq="30min", inclusive="left", tz="UTC"
+    )
+    observed = pd.DatetimeIndex(frame.timestamp_utc)
+    missing, unexpected = expected.difference(observed), observed.difference(expected)
+    return {
+        "calendar_year": year,
+        "complete": observed.equals(expected),
+        "expected_rows": len(expected),
+        "observed_rows": len(observed),
+        "expected_hours": len(expected) / 2,
+        "missing_intervals": len(missing),
+        "unexpected_intervals": len(unexpected),
+        "duplicate_intervals": int(observed.duplicated().sum()),
+        "first_utc": observed[0].isoformat() if len(observed) else None,
+        "last_utc": observed[-1].isoformat() if len(observed) else None,
+    }
+
+
+def require_complete_year(frame: pd.DataFrame, year: int) -> dict:
+    coverage = calendar_coverage(frame, year)
+    if not coverage["complete"]:
+        raise ValueError(
+            f"Incomplete calendar coverage for {year}: "
+            f"{coverage['missing_intervals']} missing, "
+            f"{coverage['unexpected_intervals']} unexpected, "
+            f"{coverage['duplicate_intervals']} duplicate half-hours; "
+            f"expected {coverage['expected_rows']} ordered rows"
+        )
+    return coverage
+
+
 def _allowed_download(url: str, redirect: bool = False) -> bool:
     parsed = urlparse(url)
     if (
@@ -148,6 +184,8 @@ def _download(url: str) -> bytes:
 
 
 def fetch_neso(year: int, root: Path) -> Path:
+    if type(year) is not int or not 1900 <= year <= 2100:
+        raise ValueError("Calendar year must be an integer from 1900 to 2100")
     metadata_bytes = _download(NESO_METADATA)
     metadata = json.loads(metadata_bytes)["result"]
     resources = [
@@ -161,7 +199,7 @@ def fetch_neso(year: int, root: Path) -> Path:
     destination = root / "neso-demand" / str(year) / digest
     manifest = destination / "manifest.json"
     if manifest.exists():
-        validate_data_manifest(manifest)
+        validate_data_manifest(manifest, expected_year=year)
         return manifest
     destination.mkdir(parents=True, exist_ok=False)
     (destination / "source.csv").write_bytes(content)
@@ -185,12 +223,16 @@ def fetch_neso(year: int, root: Path) -> Path:
         "power_unit": "MW",
         "timezone": "UTC",
         "processing_function": "gb_flexabm.data.parse_neso_demand",
+        "calendar_year": year,
+        "calendar_coverage": calendar_coverage(frame, year),
     }
     manifest.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
+    # Preserve the acquired bytes even when the calendar gate rejects them.
+    require_complete_year(frame, year)
     return manifest
 
 
-def validate_data_manifest(manifest: Path) -> pd.DataFrame:
+def validate_data_manifest(manifest: Path, expected_year: int | None = None) -> pd.DataFrame:
     record = json.loads(manifest.read_text(encoding="utf-8"))
     if record.get("file") != "source.csv":
         raise ValueError("Unexpected raw data filename")
@@ -202,4 +244,15 @@ def validate_data_manifest(manifest: Path) -> pd.DataFrame:
         != record["metadata_sha256"]
     ):
         raise ValueError("Metadata checksum mismatch")
-    return parse_neso_demand(path)
+    frame = parse_neso_demand(path)
+    if record["rows"] != len(frame) or record["duration_hours"] != float(
+        frame.duration_hours.sum()
+    ):
+        raise ValueError("Recorded row count or duration does not match the raw data")
+    declared_year = record.get("calendar_year")
+    if expected_year is not None and declared_year is not None and expected_year != declared_year:
+        raise ValueError("Expected year differs from the data manifest's declared calendar year")
+    year = expected_year if expected_year is not None else declared_year
+    if year is not None:
+        require_complete_year(frame, year)
+    return frame
