@@ -9,7 +9,7 @@ Updated 31 August 2026. **Software v0.3 remains scientifically exploratory.** A 
 | Workstream | Current evidence | Status |
 |---|---|---|
 | Repository contracts | MIT, citation, schemas, locked environment, CLI, manifests, tests and cross-platform CI | Delivered for exploratory scope |
-| Official data | Training NESO audit, bounded/resumable ERA5, and 804 pinned Elexon price/generation responses | Partial: price coverage fails; weather conversion and other historical inputs/targets pending |
+| Official data | Training NESO audit, bounded/resumable ERA5, 804 Elexon responses and 175 acquired/extracted public references | Partial: semantic normalization, price-target decision and weather conversion pending |
 | Dispatch and planner | Shared single-node LP, storage, vintages, dual prices and objective checks | Delivered for synthetic electricity experiments |
 | Investors and markets | Adaptive investors, budgets, construction/retirement and fixed payment | Partial: official CM/CfD and empirical behaviour missing |
 | Time reduction | Exogenous medoids/extremes and independent-day versus linked-storage diagnostics | Utilities tested on authored fixtures; no empirical approximation or annual ABM validation |
@@ -36,6 +36,8 @@ Use S-identifiers to separate delivery from scientific maturity. The research br
 S2 uses reviewable slices: (a) historical demand and explicit series contracts; (b) fleet/cost and price/weather inputs; (c) versioned bundles and split-access tests. Do not fit with a demand-only dataset. Specify imports, embedded generation, availability versus curtailed output, price products and monetary base year. ERA5 and Elexon raw acquisition are implemented; weather conversion, market-boundary reconciliation and DUKES integration remain incomplete. The [full training-market audit](MARKET_DATA.md) found no complete APXMIDP price year. Obtain a legitimate archive or explicitly review a missingness/price-window amendment before freezing the protocol; no automatic date change or filling is authorized by the current implementation.
 
 ### Historical split and prior exposure
+
+The [public-input milestone](PUBLIC_INPUTS.md) acquired/extracted 175 references, including later observations and current revisions. This is mechanical source processing, not fitted data or a pristine-holdout claim. IMRP has not replaced APXMIDP or changed the split. S2 remains in progress; source/units/money/vintage mapping and historical reconciliation are the next bounded work.
 
 Proposed windows: 2013–2018 training, 2019–2021 internal validation, 2022–2025 final evaluation. These are **not frozen or preregistered**. Assess coverage and forecast-origin vintages first. Calibration code must receive training observations only; future tests must reject later observations.
 

@@ -17,7 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 gui = ["streamlit==1.62.0"]
-research = ["cdsapi==0.7.7", "ecmwf-datastores-client==0.5.3", "xarray>=2025.1,<2027", "netCDF4>=1.7,<2", "openpyxl>=3.1,<4"]
+research = ["cdsapi==0.7.7", "ecmwf-datastores-client==0.5.3", "xarray>=2025.1,<2027", "netCDF4>=1.7,<2", "openpyxl>=3.1,<4", "pypdf>=6,<7"]
 dev = ["pytest>=8,<9", "hypothesis>=6,<7", "ruff>=0.9,<1", "mypy>=1.15,<2", "types-PyYAML", "pandas-stubs"]
 
 [project.scripts]

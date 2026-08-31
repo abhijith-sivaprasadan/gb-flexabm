@@ -1,3 +1,5 @@
 * text=auto eol=lf
 *.png binary
 docs/reference/** -text whitespace=cr-at-eol
+# The public inventory hashes the exact reviewed catalogue bytes.
+studies/historical-v1/public-sources.json -text whitespace=cr-at-eol

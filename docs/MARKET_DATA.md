@@ -46,6 +46,8 @@ The [NESO historical generation mix archive](https://www.neso.energy/data-portal
 
 ## Required decision before fitting
 
+The later [LCCC IMRP acquisition](PUBLIC_INPUTS.md) supplies a different hourly day-ahead reference from 30 June 2016. Native date/period keys are complete in 2017/2018, but this does not recover 2013–2015 or repair APXMIDP coverage. Timezone semantics and an explicit protocol decision are still required. No substitution was made.
+
 The preferred next step is to obtain a legitimate, licensed legacy MID archive and reconcile overlaps against the pinned API observations. Portal/archive access has been requested from the maintainer; **never paste a password or API key into chat or public files**.
 
 If such an archive cannot be obtained, the research protocol needs an explicit, reviewed amendment specifying which price years/intervals are evaluated, minimum monthly coverage, zero-volume treatment, missingness bias checks and which claims are withdrawn. Simply shortening training to 2017–2018 would not remove its gaps. A revised protocol must be frozen before fitting and retain the already-disclosed 2024 demand exposure. No acceptance threshold has been relaxed here.

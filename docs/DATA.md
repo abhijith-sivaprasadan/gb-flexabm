@@ -1,5 +1,7 @@
 # Data contracts and source register
 
+The [public-reference acquisition milestone](PUBLIC_INPUTS.md) records 175 locally extracted, checksummed source files. These raw references are not installed as normalized model inputs. Publisher terms, third-party exceptions, historical vintages and later-data exposure are explicit; the original synthetic experiment remains unchanged.
+
 ## Synthetic experiment
 
 The complete input is `src/gb_flexabm/fixtures/demo.yaml`. Its source statement identifies all parameters as authored demonstration assumptions. Demand, wind and solar are deterministic sinusoidal profiles (`schema.synthetic_periods`), not historical GB observations or fitted weather series. Default demand growth is an assumption; 8760 annual weight is a synthetic non-leap-year normalisation, not a claim about the actual calendar years.
