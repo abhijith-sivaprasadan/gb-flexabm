@@ -18,6 +18,7 @@ The implementation includes:
 - Paired energy-only / stylised-capacity-payment experiments, CSV audit trails, a generated report and checksum manifests.
 - An **optional local GUI** for configuring paired experiments, reopening runs, inspecting results/provenance and downloading verified ZIP/YAML artifacts.
 - An **optional**, provenance-preserving official NESO demand adapter with 46/48/50-period daylight-saving and whole-calendar-year checks. Observed data do not feed the synthetic experiment.
+- Bounded Elexon price/generation acquisition, revision and hourly-aggregation checks, and a GUI view of the **actual failed training-coverage gates**. No missing data is filled.
 - Analytical, property-based and metamorphic tests, locked dependencies and cross-platform CI.
 
 ## Current stage and next work
@@ -26,11 +27,13 @@ The implementation includes:
 |---|---|
 | S0 — Shared model, investor engine, audit trails and reference experiment | Done, v0.1 |
 | S1 — Local GUI, whole-year demand gate and delivery workflow | Implemented, v0.2 |
-| S2 — Historical input/target bundle and split-access protocol | **In progress:** training-demand audit, split guards and resumable ERA5 acquisition; full bundle pending |
+| S2 — Historical input/target bundle and split-access protocol | **In progress:** NESO/ERA5 tooling plus 804 audited Elexon responses; price coverage fails and the full bundle is still missing |
 | S3–S5 — Empirical dispatch, calibration, locked validation and predictive baselines | Supporting utilities tested; historical institutions, fitting, evidence and independent evaluation pending |
 | S6 — Zonal, flexibility, heat and hydrogen extensions | Deferred |
 
 The [delivery plan](docs/ROADMAP.md) maps completed work to the research brief and defines acceptance criteria. Every milestone must update **this README and the [portfolio page](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html)**, pass checks, and be committed/pushed with CI and Pages verified. See [maintainer instructions](AGENTS.md).
+
+**Current data decision:** the complete API audit found no APXMIDP observations in 2013–2015, partial 2016 coverage, and 334/252 missing half-hours in 2017/2018 respectively, plus zero-volume periods. S2–S5 are not complete. [Findings, source caveats and the required archive/missingness decision](docs/MARKET_DATA.md) explain what must be resolved before fitting; no study window or acceptance criterion has been silently changed.
 
 ## Launch the GUI
 
@@ -94,6 +97,8 @@ uv run --locked gbflex study audit-demand --protocol studies/historical-v1/proto
 ```
 
 ERA5 commands are explicit network operations, never called by the experiment or offline tests. Jobs retain their remote IDs; cached NetCDFs are checked for hashes, units, timestamps and grid coverage. Credentials stay out of repository files. Raw weather still needs fleet-weighted wind/PV conversion. Use a fresh audit output path. See the guide for queue exit codes, storage estimates, the exact fields and all non-weather inputs.
+
+For the new bounded Elexon workflow, run `uv run --locked python scripts/fetch_market.py fetch --dataset mid --limit 402` (or `--dataset fuelhh`). See [MARKET_DATA.md](docs/MARKET_DATA.md) for auditing, six-day request limits, provider selection, timestamp warnings and exact failed-coverage evidence. Downloading all requested responses does not mean all observations exist.
 
 ```sh
 uv run --locked gbflex data catalog

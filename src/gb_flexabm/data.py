@@ -27,8 +27,13 @@ CATALOG = {
     },
     "elexon-mid": {
         "publisher": "Elexon",
-        "status": "planned",
+        "status": "bounded acquisition/audit implemented; training coverage fails",
         "boundary": "Wholesale Market Index target; not System Prices.",
+    },
+    "elexon-fuelhh": {
+        "publisher": "Elexon",
+        "status": "bounded acquisition/audit implemented; gaps and source timestamp warnings",
+        "boundary": "Metered fuel-type MW and signed interconnector flows; not weather availability or a reconciled GB target.",
     },
     "dukes": {"publisher": "DESNZ", "status": "planned"},
     "era5": {

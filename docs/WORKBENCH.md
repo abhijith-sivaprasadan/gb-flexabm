@@ -42,3 +42,7 @@ Matching inputs reproduce numerical CSVs within the stated tolerances. Identity 
 GitHub Pages hosts the [case study](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html#workbench), **not the Python GUI**. In v0.3, Data readiness includes the exact ERA5 variable groups, area, monthly command and full checklist link. Acquisition runs explicitly in a terminal with a hidden token prompt; the GUI never collects credentials or silently downloads. The Delivery plan distinguishes implemented utilities from pending empirical gates. S2's complete historical bundle remains unfinished.
 
 Framework references: [forms](https://docs.streamlit.io/develop/concepts/architecture/forms), [AppTest](https://docs.streamlit.io/develop/api-reference/app-testing/st.testing.v1.apptest), [configuration](https://docs.streamlit.io/develop/api-reference/configuration/config.toml). Streamlit 1.62.0 is pinned in the optional GUI extra; the core CLI does not require it.
+
+### Market coverage evidence
+
+Data readiness now displays the committed APXMIDP/FUELHH audit snapshots, including their timestamps, verified-response counts, missing half-hours and failed calendar gates. A response checksum is not a completeness claim. Reports are checked again on rerender; tampering removes the table and shows an error. When launched outside a repository containing the snapshots, the GUI reports their absence rather than showing invented values. It never queries Elexon or fills gaps implicitly. See [source findings and remaining decisions](MARKET_DATA.md).
