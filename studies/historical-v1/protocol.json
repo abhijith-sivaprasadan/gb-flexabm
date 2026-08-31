@@ -10,6 +10,7 @@
     "holdout": [2022, 2023, 2024, 2025]
   },
   "prior_exposure": [
+    {"source": "Public-input acquisition and mechanical extraction", "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "purpose": "Source QA/extraction includes later observations and current revisions, not fitting. IMRP numeric QA limited to training; later dates/periods counted structurally. See docs/PUBLIC_INPUTS.md; no pristine holdout claim."},
     {"source": "NESO demand", "year": 2024, "purpose": "ingestion, calendar and annual-total verification before split guard"},
     {"source": "NESO demand", "years": [2013, 2014, 2015, 2016, 2017, 2018], "purpose": "training-window source acquisition and completeness audit"},
     {"source": "Elexon MID", "years": [2013, 2016, 2018], "purpose": "January 1 training-window API coverage probes"}

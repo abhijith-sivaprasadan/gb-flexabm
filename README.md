@@ -27,13 +27,15 @@ The implementation includes:
 |---|---|
 | S0 — Shared model, investor engine, audit trails and reference experiment | Done, v0.1 |
 | S1 — Local GUI, whole-year demand gate and delivery workflow | Implemented, v0.2 |
-| S2 — Historical input/target bundle and split-access protocol | **In progress:** NESO/ERA5 tooling plus 804 audited Elexon responses; price coverage fails and the full bundle is still missing |
+| S2 — Historical input/target bundle and split-access protocol | **In progress:** 175 additional source files acquired/extracted alongside NESO/ERA5 tooling and 804 Elexon responses; semantic integration and price-target decision pending |
 | S3–S5 — Empirical dispatch, calibration, locked validation and predictive baselines | Supporting utilities tested; historical institutions, fitting, evidence and independent evaluation pending |
 | S6 — Zonal, flexibility, heat and hydrogen extensions | Deferred |
 
 The [delivery plan](docs/ROADMAP.md) maps completed work to the research brief and defines acceptance criteria. Every milestone must update **this README and the [portfolio page](https://abhijith-sivaprasadan.github.io/projects/gb-flexabm.html)**, pass checks, and be committed/pushed with CI and Pages verified. See [maintainer instructions](AGENTS.md).
 
 **Current data decision:** the complete API audit found no APXMIDP observations in 2013–2015, partial 2016 coverage, and 334/252 missing half-hours in 2017/2018 respectively, plus zero-volume periods. S2–S5 are not complete. [Findings, source caveats and the required archive/missingness decision](docs/MARKET_DATA.md) explain what must be resolved before fitting; no study window or acceptance criterion has been silently changed.
+
+The [public-input collection](docs/PUBLIC_INPUTS.md) now contains 175 hash-verified source/extraction pairs (443.50 MiB): fuel/CPI/FX, 114 auction reports, costs, REPD, all eight NESO CM files and LCCC/Ofgem policy references. IMRP starts on 30 June 2016; native 2017/2018 hourly-period keys are complete, but it has not replaced APXMIDP. Raw data stay local; mechanical extraction includes later periods and is not a pristine-holdout or model-readiness claim.
 
 ## Launch the GUI
 
