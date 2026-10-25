@@ -83,8 +83,7 @@ def audit_historical_readiness(
                 "elexon_mid_wholesale_price_target_usable": price_ok,
                 "elexon_fuelhh_generation_complete": gen_ok,
                 "mid_reported_rows": sum(
-                    x.get("rows", 0) for x in p.get("categories", [])
-                    if x.get("name") == "APXMIDP"
+                    x.get("rows", 0) for x in p.get("categories", []) if x.get("name") == "APXMIDP"
                 ),
             }
         )
