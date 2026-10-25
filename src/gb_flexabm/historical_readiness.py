@@ -20,15 +20,21 @@ def audit_historical_readiness(
     """Expose exact gaps by year without converting acquisition into validation."""
     protocol = Protocol.from_dict(protocol_data)
     years = protocol.record["splits"]["train"]
+    pinned_hashes = set()
     for name, record in (
         ("demand", demand),
         ("price", price),
         ("generation", generation),
     ):
-        if record.get("protocol_sha256") != protocol.identity:
-            raise ValueError(f"{name} source audit belongs to a different protocol")
+        pinned_hashes.add(record.get("protocol_sha256"))
         if record.get("schema_version") != 1:
             raise ValueError(f"Unsupported {name} audit schema")
+    if len(pinned_hashes) != 1 or not all(
+        isinstance(digest, str) and len(digest) == 64 for digest in pinned_hashes
+    ):
+        raise ValueError("Source audits belong to different protocols")
+    archived_protocol_hash = next(iter(pinned_hashes))
+    archived_matches_current = archived_protocol_hash == protocol.identity
     if price.get("dataset") != "mid" or generation.get("dataset") != "fuelhh":
         raise ValueError("Market-source roles are swapped or unsupported")
     if source_inventory.get("schema_version") != 1:
@@ -54,6 +60,8 @@ def audit_historical_readiness(
 
     yearly = []
     blockers = []
+    if not archived_matches_current:
+        blockers.append("Archived data audits were pinned to an older protocol; re-admission required")
     for year in years:
         day_count = 366 if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else 365
         n = day_count * 48
@@ -108,6 +116,8 @@ def audit_historical_readiness(
     return {
         "status": "NOT_READY_FOR_HISTORICAL_CALIBRATION_OR_CLAIMS",
         "protocol_sha256": protocol.identity,
+        "archived_audit_protocol_sha256": archived_protocol_hash,
+        "archived_audit_matches_current_protocol": archived_matches_current,
         "training_years": years,
         "observed_demand_annual_completeness_count": sum(
             row["neso_demand_complete"] for row in yearly
