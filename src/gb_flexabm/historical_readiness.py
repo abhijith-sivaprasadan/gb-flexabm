@@ -61,7 +61,9 @@ def audit_historical_readiness(
     yearly = []
     blockers = []
     if not archived_matches_current:
-        blockers.append("Archived data audits were pinned to an older protocol; re-admission required")
+        blockers.append(
+            "Archived data audits were pinned to an older protocol; re-admission required"
+        )
     for year in years:
         day_count = 366 if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else 365
         n = day_count * 48
