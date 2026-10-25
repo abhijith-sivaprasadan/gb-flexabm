@@ -1,0 +1,14 @@
+{
+  "source_product": "LCCC_IMRP",
+  "scope": "native-date-period coverage from committed audit",
+  "years": {
+    "2013": 0,
+    "2014": 0,
+    "2015": 0,
+    "2016": 4441,
+    "2017": 8760,
+    "2018": 8760
+  },
+  "matches_original_target_semantics": false,
+  "approved_for_model_calibration": false
+}
