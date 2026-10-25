@@ -26,7 +26,12 @@ def test_real_coverage_is_not_silently_repaired():
     assert report["complete_original_market_years"] == 0
     assert report["complete_original_generation_years"] == 0
     assert [r["separate_hourly_native_rows"] for r in report["rows"]] == [
-        0, 0, 0, 4441, 8760, 8760,
+        0,
+        0,
+        0,
+        4441,
+        8760,
+        8760,
     ]
 
 
