@@ -30,6 +30,7 @@ def test_committed_empirical_admission_is_blocked():
     assert actual["training_years"] == list(range(2013, 2019))
     assert actual["observed_demand_annual_completeness_count"] == 6
     assert actual["price_usable_years"] == 0
+    assert actual["archived_audit_matches_current_protocol"] is False
     assert actual["generation_complete_years"] == 0
     assert "Study protocol is draft" in " | ".join(actual["blockers"])
 
@@ -62,7 +63,7 @@ def test_protocol_digest_mismatch_is_rejected():
     p, d, price, gen, inventory = evidence()
     price = copy.deepcopy(price)
     price["protocol_sha256"] = "0" * 64
-    with pytest.raises(ValueError, match="different protocol"):
+    with pytest.raises(ValueError, match="different protocols"):
         audit_historical_readiness(p, d, price, gen, inventory)
 
 
