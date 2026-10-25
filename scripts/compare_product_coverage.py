@@ -15,9 +15,7 @@ def main() -> None:
         "docs/reference/training-market-fuelhh.json",
         "studies/historical-v1/imrp-coverage-probe.json",
     )
-    reports = [
-        json.loads((root / path).read_text(encoding="utf-8")) for path in paths
-    ]
+    reports = [json.loads((root / path).read_text(encoding="utf-8")) for path in paths]
     print(json.dumps(compare_product_coverage(*reports), indent=2, allow_nan=False))
 
 
