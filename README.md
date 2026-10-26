@@ -150,3 +150,15 @@ New acquisitions require the entire requested year, including leap days and DST.
 - [Contributing](CONTRIBUTING.md), [security](SECURITY.md), [code of conduct](CODE_OF_CONDUCT.md), [citation](CITATION.cff).
 
 Code, original documentation and synthetic fixtures are MIT-licensed. External datasets retain their publisher's terms. Please cite the exact commit and run manifest; there is no peer-reviewed validation, DOI or publication claim.
+
+
+### October 2026 — historical MID archive preflight and decision-rule diagnostics
+
+A [source-recovery engineering increment](docs/S2_ARCHIVE_AND_INVESTOR_DIAGNOSTICS_2026-10-26.md) adds an offline fail-closed check for **original** legacy Elexon MID/APXMIDP CSV archives (DST calendar, active revisions, missing/zero-volume records, source SHA-256), plus a hash-verified reconstruction of the archived synthetic investor entry decisions. Example commands:
+
+```bash
+uv run --locked python scripts/audit_investor_response.py docs/reference/experiment --output runs/reference-investor-entry.json
+uv run --locked python scripts/audit_legacy_mid_archive.py --help
+```
+
+**No original MID archive has yet been admitted, historical 2013–2018 wholesale-price coverage remains blocked, and no GB policy effect or historical calibration is claimed.** Both utilities preserve the existing synthetic/scientific boundary.
