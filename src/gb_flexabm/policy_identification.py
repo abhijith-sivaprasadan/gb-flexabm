@@ -67,7 +67,10 @@ def examine_policy_identification(directory: Path) -> dict:
         raise ValueError("Positive stylised payment level required for identification")
 
     investments = _max_abs_delta(da, db, ["requested_mw", "accepted_mw"])
-    physical_fields = [*PHYSICAL_COLUMNS, *[c for c in aa if c.startswith("capacity_") and c.endswith("_mw")]]
+    physical_fields = [
+        *PHYSICAL_COLUMNS,
+        *[c for c in aa if c.startswith("capacity_") and c.endswith("_mw")],
+    ]
     physical = _max_abs_delta(aa, ab, physical_fields)
     resource = _max_abs_delta(sa, sb, ["resource_npv_gbp", "resource_gap_gbp"])
     for c in ("year", "seed", "design", "capacity_payment_gbp"):
