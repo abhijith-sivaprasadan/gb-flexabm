@@ -14,7 +14,7 @@ The August reference `docs/reference/experiment` is a 20-seed simulation in whic
   1. `baseline`: unchanged demo assumptions.
   2. `budget_20pct`: every investor's original fixed annual budget multiplied by 0.2; project size/finance is unchanged.
   3. `budget_zero`: every investor budget set to 0; a structural negative control with no new investments permitted, not a plausible estimate.
-  4. `high_hurdle`: each investor's personal investment discount/hurdle rate increased by 0.15 **absolute percentage points as a fraction** (e.g. 0.08→0.23). We mean 15 **percentage points**, not 15% relative.
+  4. `high_hurdle`: each investor's personal investment discount/hurdle rate increased by **15 percentage points** (e.g. 0.08→0.23), not multiplied by 1.15.
   5. `zero_expectation_noise`: each investor's forecast noise fraction set to exactly zero; other parameters untouched.
 - **60 matched pairs / 120 separate ABM solutions** planned. The continuous central planner is solved separately for each variant by the shared `run_demo` API; it should have the same optimum because no physical/economic `Technology` or demand inputs are modified.
 - All runs must pass the previously shipped solver and accounting checks. The per-case full output must include decisions, assets, annual physical/price results, planner solution, provenance manifest and hashes.
