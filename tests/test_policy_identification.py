@@ -30,5 +30,5 @@ def test_missing_pair_and_duplicate_pair_are_not_allowed():
     assert a.index.equals(b.index)
     with pytest.raises(ValueError, match="Duplicated"):
         _paired(pd.concat([table, table.iloc[[0]]]), ["seed"])
-    with pytest.raises(ValueError, match="Missing matched"):
+    with pytest.raises(ValueError, match="Exactly two"):
         _paired(table.iloc[:1], ["seed"])
