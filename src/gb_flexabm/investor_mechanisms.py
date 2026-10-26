@@ -54,7 +54,9 @@ def configuration(case: str) -> dict:
 def physical_contract_hash(config: dict) -> str:
     # Investor-only interventions must never silently change dispatch,
     # planner, payment definition, technology CAPEX or physical chronology.
-    return canonical_hash({k: v for k, v in config.items() if k not in {"investors", "assumption_source"}})
+    return canonical_hash(
+        {k: v for k, v in config.items() if k not in {"investors", "assumption_source"}}
+    )
 
 
 def run_case(case: str, output: Path) -> dict:
