@@ -23,9 +23,7 @@ def csv_rows(year=2016):
         local = stamp.tz_convert("Europe/London")
         midnight_utc = local.normalize().tz_convert("UTC")
         period = int((stamp - midnight_utc).total_seconds() / 1800) + 1
-        rows.append(
-            f"MID,APXMIDP,{local.strftime('%Y%m%d')},{period},-10.5,50.25"
-        )
+        rows.append(f"MID,APXMIDP,{local.strftime('%Y%m%d')},{period},-10.5,50.25")
     return rows
 
 
@@ -88,9 +86,7 @@ def test_duplicate_active_or_uncontrolled_revision_rejected(tmp_path):
     with pytest.raises(ValueError, match="Inactive revision"):
         inspect(archive(tmp_path, [inactive, *rows]))
     flagged = [row + ",Y" for row in rows]
-    report = inspect(
-        archive(tmp_path, [inactive, *flagged]), revision_rule="active_flag"
-    )
+    report = inspect(archive(tmp_path, [inactive, *flagged]), revision_rule="active_flag")
     assert report["apx_price_product_complete"]
     assert report["inactive_apx_rows_excluded"] == 1
     with pytest.raises(ValueError, match="explicit flag"):
@@ -126,8 +122,11 @@ def test_provenance_and_report_tamper_detection(tmp_path):
         )
     with pytest.raises(ValueError, match="HTTPS"):
         audit_mid_archive(
-            path, 2016, source_url="http://example.org/x", licence="terms",
-            retrieved_at_utc=RETRIEVED
+            path,
+            2016,
+            source_url="http://example.org/x",
+            licence="terms",
+            retrieved_at_utc=RETRIEVED,
         )
     report = inspect(path)
     output = tmp_path / "audit.json"
