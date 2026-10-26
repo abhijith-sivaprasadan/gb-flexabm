@@ -116,7 +116,7 @@ def test_other_provider_never_fills_apx_gaps(tmp_path):
 
 def test_provenance_and_report_tamper_detection(tmp_path):
     path = archive(tmp_path, csv_rows())
-    with pytest.raises(ValueError, match="UTC offset"):
+    with pytest.raises(ValueError, match="timezone-aware"):
         audit_mid_archive(
             path, 2016, source_url=SOURCE, licence="terms", retrieved_at_utc="2026-10-26"
         )
