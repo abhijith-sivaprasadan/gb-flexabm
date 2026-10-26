@@ -23,11 +23,14 @@ def test_reference_reconstructs_all_decisions_without_empirical_overclaim():
     assert report["historical_validation"] is False
 
 
-@pytest.mark.parametrize("column,value", [
-    ("score_gbp_per_mw", -987654.0),
-    ("requested_mw", 123.0),
-    ("accepted_mw", 2000000.0),
-])
+@pytest.mark.parametrize(
+    "column,value",
+    [
+        ("score_gbp_per_mw", -987654.0),
+        ("requested_mw", 123.0),
+        ("accepted_mw", 2000000.0),
+    ],
+)
 def test_tampered_decision_evidence_is_rejected(tmp_path, column, value):
     from shutil import copytree
 
