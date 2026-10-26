@@ -32,3 +32,7 @@ The exact source-bundle contract in `src/gb_flexabm/study.py` demands the follow
 5. High-value next empirical ROI is obtaining **complete primary-price product records and contemporaneous fleet vintage**, not writing a larger synthetic agent UI or tuning a missing-data metric to pass.
 
 **No new official historical rows or source licences were acquired or certified by this document.**
+
+## New offline archive admissibility preflight (tooling only)
+
+The [S2 archive preflight](S2_ARCHIVE_AND_INVESTOR_DIAGNOSTICS_2026-10-26.md) can now inspect a legitimately obtained **legacy MID CSV** by original date/settlement-period keys, APXMIDP identity, 46/48/50 settlement-day periods, duplicate-active revision and zero-volume rules, and raw source SHA-256. This is *not an acquired or authenticated original archive*: none was supplied or newly admitted in this increment. The product-completeness flag must not be confused with historical model-bundle admission, source-vintage certification, or S2 completion. Original API training completeness remains zero usable years.
