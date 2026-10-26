@@ -1,0 +1,67 @@
+name: Synthetic investor mechanisms MX01 (five registered variants)
+on:
+  push:
+    branches: [research/investor-mechanisms-policy-identification-20261026]
+    paths:
+      - docs/INVESTOR_MECHANISM_STUDY_MX01.md
+      - src/gb_flexabm/investor_mechanisms.py
+      - src/gb_flexabm/policy_identification.py
+      - scripts/run_investor_mechanisms.py
+      - tests/test_policy_identification.py
+      - tests/test_investor_mechanisms.py
+      - .github/workflows/investor-mechanisms-mx01.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixed_synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [baseline, budget_20pct, budget_zero, high_hurdle, zero_expectation_noise]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exactly locked development environment
+        run: python -m pip install uv==0.12.7
+      - run: uv sync --locked --extra dev --extra research --python 3.12
+      - name: Verify protocol controls
+        run: uv run --locked pytest -q tests/test_policy_identification.py tests/test_investor_mechanisms.py
+      - name: Run registered matched synthetic policy comparisons
+        run: uv run --locked python -m scripts.run_investor_mechanisms --case ${{ matrix.case }} --output runs/mx01-${{ matrix.case }}
+      - name: Verify complete hashed solver output
+        run: uv run --locked gbflex verify --run runs/mx01-${{ matrix.case }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mx01-${{ matrix.case }}-raw
+          path: runs/mx01-${{ matrix.case }}/
+          if-no-files-found: warn
+  source_audit:
+    needs: [fixed_synthetic]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install uv==0.12.7
+      - run: uv sync --locked --extra dev --python 3.12
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: mx01-*-raw
+          path: runs/mx01-source-artifacts
+          merge-multiple: false
+      - name: Recheck ALL 60 pairs against five original hashed source archives
+        run: uv run --locked python -m scripts.summarize_investor_mechanisms --root runs/mx01-source-artifacts --output runs/mx01-crosscase-audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mx01-final-crosscase-evidence
+          path: runs/mx01-crosscase-audit.json
+          if-no-files-found: warn
