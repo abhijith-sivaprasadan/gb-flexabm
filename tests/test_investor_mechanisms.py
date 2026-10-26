@@ -1,7 +1,5 @@
 """MX01 investor-only levers must retain exact physical common-model inputs."""
 
-import copy
-
 import pytest
 
 from gb_flexabm.investor_mechanisms import CASES, SEEDS, configuration, physical_contract_hash
