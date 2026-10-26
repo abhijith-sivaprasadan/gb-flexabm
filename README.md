@@ -6,6 +6,32 @@
 
 Scientific status: **exploratory, synthetic and uncalibrated (software v0.3)**. The GB label describes the intended research context and optional historical-data tooling, not a validated representation of Great Britain. This is independent portfolio research software, not an official market model, university project or investment tool.
 
+## October 2026 research update: what actually changes investor decisions?
+
+A newly registered **five-variant × 12-seed × two-policy, 120-trajectory
+synthetic mechanism study** distinguishes budget constraints, investment
+thresholds and an illustrative capacity payment:
+
+- **0/60 paired policy comparisons** changed physical capacity or discounted
+  resource cost under the five tested synthetic investor mechanisms. Capacity
+  payments remained monetary transfers rather than resource-cost savings.
+- Decreasing fixed investor annual budgets to **20%** raised the synthetic
+  discounted six-year resource cost from **£111.459bn to £413.447bn**; setting
+  them to zero raised it to **£579.496bn**. This is a stress-test under an
+  assumed high scarcity penalty, not a prediction of British welfare.
+- The [exact investor entry frontier](docs/INVESTOR_ENTRY_FRONTIER_MX02.md)
+  demonstrates why a payment cannot force extra construction when agents
+  already invest up to fixed budget/technology ceilings, cannot finance a
+  single project block, or cannot commission within the horizon.
+- [Study register and full design](docs/INVESTOR_MECHANISM_STUDY_MX01.md) ·
+  [author working research note](docs/INVESTOR_MECHANISMS_RESEARCH_NOTE_2026-10-26.md) ·
+  [source-recovery gates](docs/HISTORICAL_GB_SOURCE_RECOVERY_2026-10-26.md).
+
+**This does not complete S2–S5.** All 2013–2018 historical market targets,
+fleet/cost vintages, calibrated investor parameters, and any real GB Capacity
+Market effect remain unverified. The source ZIP artifacts and manifest hashes
+are available through the GitHub Actions MX01 research workflow.
+
 ## Research question
 
 Under a common electricity-system boundary, how do bounded investor expectations, construction delays and a stylised capacity payment change investment and resource costs relative to an ideal planner?
