@@ -42,9 +42,10 @@ def audit_investor_response(directory: Path) -> dict:
 
     for (seed, year, investor_id), row in energy.iterrows():
         if (
-            type(seed) is not int
-            and not isinstance(seed, np.integer)
-        ) or int(year) not in years or investor_id not in investors:
+            (type(seed) is not int and not isinstance(seed, np.integer))
+            or int(year) not in years
+            or investor_id not in investors
+        ):
             raise ValueError("Unknown decision seed/year/investor")
         investor = investors[investor_id]
         tech = techs[investor.technology]
@@ -63,9 +64,7 @@ def audit_investor_response(directory: Path) -> dict:
                 requested = 0.0
             if not np.isclose(score, record["score_gbp_per_mw"], rtol=1e-10, atol=0.01):
                 raise ValueError(f"{design} NPV score disagrees with investor source rule")
-            if not np.isclose(
-                requested, record["requested_mw"], rtol=1e-10, atol=1e-7
-            ):
+            if not np.isclose(requested, record["requested_mw"], rtol=1e-10, atol=1e-7):
                 raise ValueError(f"{design} requested investment disagrees with source rule")
             if (
                 not np.isfinite(record["accepted_mw"])
@@ -104,9 +103,8 @@ def audit_investor_response(directory: Path) -> dict:
             switched_requests += 1
         if not np.isclose(row["accepted_mw"], control["accepted_mw"], atol=1e-7):
             switched_accepted += 1
-        if (
-            float(row["requested_mw"]) > 0
-            and float(row["accepted_mw"]) + 1e-7 < float(row["requested_mw"])
+        if float(row["requested_mw"]) > 0 and float(row["accepted_mw"]) + 1e-7 < float(
+            row["requested_mw"]
         ):
             limited_by_tech_cap += 1
     if matched != len(energy):
