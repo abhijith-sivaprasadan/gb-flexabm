@@ -46,7 +46,7 @@ def audit_investor_response(directory: Path) -> dict:
         seed, year, investor_id = key
         if (
             (type(seed) is not int and not isinstance(seed, np.integer))
-            or type(year) is not int
+            or (type(year) is not int and not isinstance(year, np.integer))
             or year not in years
             or not isinstance(investor_id, str)
             or investor_id not in investors
