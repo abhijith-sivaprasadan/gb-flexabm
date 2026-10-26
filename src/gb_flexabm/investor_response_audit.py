@@ -40,9 +40,7 @@ def audit_investor_response(directory: Path) -> dict:
     highest_expected_shift = 0.0
     price = config["capacity_price_gbp_per_kw_year"]
 
-    for (key, row), (paired_key, control) in zip(
-        energy.iterrows(), paid.iterrows(), strict=True
-    ):
+    for (key, row), (paired_key, control) in zip(energy.iterrows(), paid.iterrows(), strict=True):
         if not isinstance(key, tuple) or len(key) != 3 or key != paired_key:
             raise ValueError("Mismatched decision index")
         seed, year, investor_id = key
