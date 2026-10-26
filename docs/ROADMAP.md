@@ -2,7 +2,9 @@
 
 The current release is a usable exploratory foundation. The larger research programme is not marked complete.
 
-Updated 31 August 2026. **Software v0.3 remains scientifically exploratory.** A GUI, downloader or metric utility does not advance the model to calibrated or predictive status. See [the exact acquisition checklist](HISTORICAL_DATA.md).
+Updated 26 October 2026 (historical-admission tooling and synthetic mechanism diagnostics). **Software v0.3 remains scientifically exploratory.** A GUI, downloader or metric utility does not advance the model to calibrated or predictive status. See [the exact acquisition checklist](HISTORICAL_DATA.md).
+
+The [S2 archive and investor diagnostics](S2_ARCHIVE_AND_INVESTOR_DIAGNOSTICS_2026-10-26.md) add original MID CSV preflight and archived-investor-rule reconstruction; **they do not resolve missing historical market/fleet inputs, verify source authenticity or satisfy S2–S5**. The 2013–2018 Elexon APXMIDP audit still has zero complete training years.
 
 ## Current position against the research plan
 
