@@ -26,7 +26,9 @@ def main() -> int:
     parser.add_argument("--source-url", required=True)
     parser.add_argument("--licence", required=True)
     parser.add_argument("--retrieved-at-utc", required=True)
-    parser.add_argument("--revision-rule", choices=("unique_only", "active_flag"), default="unique_only")
+    parser.add_argument(
+        "--revision-rule", choices=("unique_only", "active_flag"), default="unique_only"
+    )
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     report = audit_mid_archive(
