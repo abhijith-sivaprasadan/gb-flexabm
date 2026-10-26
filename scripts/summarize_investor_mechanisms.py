@@ -39,7 +39,9 @@ def audit_case(path: Path, case: str) -> dict:
     paid = data[data.design == "stylised_capacity_payment"]
     if len(energy) != len(SEEDS) or len(paid) != len(SEEDS):
         raise ValueError("Incomplete design and seed coverage")
-    policy_cost = paid.set_index("seed").resource_npv_gbp - energy.set_index("seed").resource_npv_gbp
+    policy_cost = (
+        paid.set_index("seed").resource_npv_gbp - energy.set_index("seed").resource_npv_gbp
+    )
     if not np.isfinite(policy_cost).all():
         raise ValueError("Nonfinite policy comparison")
     prior = annual.loc[annual.design == "energy_only"]
@@ -69,9 +71,12 @@ def compare_cases(paths: dict[str, Path]) -> dict:
     if set(paths) != set(CASES):
         raise ValueError("Exactly all five preregistered cases required")
     records = [audit_case(paths[name], name) for name in CASES]
-    hashes = {json.loads((paths[r["case"]] / "identification.json").read_text())[
-        "physical_contract_sha256"
-    ] for r in records}
+    hashes = {
+        json.loads((paths[r["case"]] / "identification.json").read_text())[
+            "physical_contract_sha256"
+        ]
+        for r in records
+    }
     if len(hashes) != 1:
         raise ValueError("Modelled physical system differs across investor cases")
     if any(row["n_matched_seeds"] != 12 for row in records):
@@ -82,8 +87,7 @@ def compare_cases(paths: dict[str, Path]) -> dict:
             row["npv_resource_gbp_mean"] - baseline["npv_resource_gbp_mean"]
         )
         row["accepted_build_difference_vs_baseline_mw_per_seed"] = (
-            row["total_accepted_mw_mean_per_seed"]
-            - baseline["total_accepted_mw_mean_per_seed"]
+            row["total_accepted_mw_mean_per_seed"] - baseline["total_accepted_mw_mean_per_seed"]
         )
     return {
         "status": "FULL_REGISTERED_SYNTHETIC_MX01_CROSSCASE_AUDIT",
