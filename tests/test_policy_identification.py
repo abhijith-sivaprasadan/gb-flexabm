@@ -7,7 +7,6 @@ import pytest
 
 from gb_flexabm.policy_identification import _paired, examine_policy_identification
 
-
 REFERENCE = Path("docs/reference/experiment")
 
 
