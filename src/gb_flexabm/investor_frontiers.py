@@ -92,9 +92,7 @@ def investment_entry_frontier(
         )
     return InvestmentEntryFrontier(
         payment_needed_gbp_per_kw_year=needed,
-        payment_cannot_change_build=not payable or (
-            score0 > investor.threshold_gbp_per_mw
-        ),
+        payment_cannot_change_build=not payable or (score0 > investor.threshold_gbp_per_mw),
         block_finance_feasible=bool(affordable),
         commission_within_horizon=can_commission,
         score_at_zero_payment_gbp_per_mw=score0,
