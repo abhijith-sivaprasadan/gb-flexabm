@@ -22,9 +22,7 @@ def test_reference_payment_changes_transfers_not_dispatch_or_builds():
 
 
 def test_missing_pair_and_duplicate_pair_are_not_allowed():
-    table = pd.DataFrame(
-        {"seed": [1, 1], "design": ["energy_only", "stylised_capacity_payment"]}
-    )
+    table = pd.DataFrame({"seed": [1, 1], "design": ["energy_only", "stylised_capacity_payment"]})
     a, b = _paired(table, ["seed"])
     assert a.index.equals(b.index)
     with pytest.raises(ValueError, match="Duplicated"):
