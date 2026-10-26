@@ -40,16 +40,22 @@ def audit_investor_response(directory: Path) -> dict:
     highest_expected_shift = 0.0
     price = config["capacity_price_gbp_per_kw_year"]
 
-    for (seed, year, investor_id), row in energy.iterrows():
+    for (key, row), (paired_key, control) in zip(
+        energy.iterrows(), paid.iterrows(), strict=True
+    ):
+        if not isinstance(key, tuple) or len(key) != 3 or key != paired_key:
+            raise ValueError("Mismatched decision index")
+        seed, year, investor_id = key
         if (
             (type(seed) is not int and not isinstance(seed, np.integer))
-            or int(year) not in years
+            or type(year) is not int
+            or year not in years
+            or not isinstance(investor_id, str)
             or investor_id not in investors
         ):
             raise ValueError("Unknown decision seed/year/investor")
         investor = investors[investor_id]
         tech = techs[investor.technology]
-        control = paid.loc[(seed, year, investor_id)]
         for design, record, payment in (
             (DESIGNS[0], row, 0.0),
             (DESIGNS[1], control, price),
