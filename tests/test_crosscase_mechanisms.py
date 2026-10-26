@@ -1,18 +1,30 @@
-"""Check the crosscase research gate cannot drop inconvenient trials."""
+"""Do not report completed evidence when cross-case source artifacts are missing."""
 
+import subprocess
+import sys
 from pathlib import Path
 
-import pytest
 
-from scripts.summarize_investor_mechanisms import compare_cases
-
-
-def test_all_five_cases_are_required():
-    with pytest.raises(ValueError, match="five preregistered"):
-        compare_cases({"baseline": Path("fake")})
+ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_empty_inputs_fail_not_report_zero_effect(tmp_path):
-    cases = ("baseline", "budget_20pct", "budget_zero", "high_hurdle", "zero_expectation_noise")
-    with pytest.raises(FileNotFoundError):
-        compare_cases({x: tmp_path / x for x in cases})
+def test_cli_fails_closed_without_the_five_original_cases(tmp_path):
+    target = tmp_path / "unsanctioned_report.json"
+    proc = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "scripts.summarize_investor_mechanisms",
+            "--root",
+            str(tmp_path),
+            "--output",
+            str(target),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert proc.returncode != 0
+    assert "FileNotFoundError" in proc.stderr
+    assert not target.exists()
