@@ -37,9 +37,7 @@ def test_payments_cannot_overcome_zero_budget_or_past_horizon():
     )
     assert zero.payment_cannot_change_build
     assert zero.payment_needed_gbp_per_kw_year is None
-    terminal = investment_entry_frontier(
-        investor, tech, 15_000, decision_year=2030, last_year=2031
-    )
+    terminal = investment_entry_frontier(investor, tech, 15_000, decision_year=2030, last_year=2031)
     assert not terminal.commission_within_horizon
     assert terminal.payment_needed_gbp_per_kw_year is None
 
@@ -56,6 +54,5 @@ def test_bad_sources_and_mismatched_owner_rejected():
     tech, investor = specimen()
     with pytest.raises(ValueError, match="mismatch"):
         investment_entry_frontier(
-            replace(investor, technology="gas"), tech, 15_000, decision_year=2026,
-            last_year=2031
+            replace(investor, technology="gas"), tech, 15_000, decision_year=2026, last_year=2031
         )
